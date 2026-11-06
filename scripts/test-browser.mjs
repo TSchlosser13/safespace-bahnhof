@@ -1,0 +1,42 @@
+import assert from 'node:assert/strict';
+import {writeFile} from 'node:fs/promises';
+import {fileURLToPath,pathToFileURL} from 'node:url';
+import {join} from 'node:path';
+const {chromium}=await import(process.env.PLAYWRIGHT_MODULE?pathToFileURL(join(process.env.PLAYWRIGHT_MODULE,'index.mjs')).href:'playwright');
+const root=fileURLToPath(new URL('..',import.meta.url)),base='http://127.0.0.1:5175/safespace-bahnhof/';
+const browser=await chromium.launch({channel:process.env.PLAYWRIGHT_CHANNEL||'msedge',headless:true});
+try{
+const page=await browser.newPage({viewport:{width:1440,height:1000},acceptDownloads:false}),errors=[],badResponses=[],requests=[];
+await page.route('https://tile.openstreetmap.org/**',route=>route.fulfill({contentType:'image/svg+xml',body:'<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256"><rect width="256" height="256" fill="#f3f3f0"/></svg>'}));
+page.on('pageerror',error=>errors.push(error.message));page.on('request',request=>requests.push(request.url()));page.on('response',response=>{if(response.status()>=400)badResponses.push({url:response.url(),status:response.status()});});
+await page.addInitScript(()=>{
+ const original=HTMLAnchorElement.prototype.click;(window).__testDownloads=[];
+ HTMLAnchorElement.prototype.click=function(){if(this.href.startsWith('blob:')){const name=this.download;fetch(this.href).then(r=>r.text()).then(text=>(window).__testDownloads.push({name,text}));return;}return original.call(this);};
+});
+await page.goto(base);const enter=page.getByRole('button',{name:'Zur Bahnhofsauswahl'});await enter.waitFor();await page.waitForFunction(()=>!document.querySelector('.startup-enter')?.disabled);await enter.click();
+assert.equal(await page.locator('.station-row').count(),10);assert.match(await page.locator('.map-profile-preview').innerText(),/Chemnitz/);
+await page.getByRole('button',{name:'Stationsprofil',exact:true}).last().click();await page.getByRole('heading',{name:'Stationsprofil',exact:true}).waitFor();
+assert.equal(await page.getByRole('button',{name:'OSM-Objekte abrufen'}).count(),0);
+await page.getByRole('button',{name:'Aktueller Anlagenstatus',exact:true}).click();await page.locator('[data-live-facility-status]').waitFor();await page.locator('.os-source-meta').waitFor();
+assert.equal(await page.getByRole('button',{name:'Jetzt aktualisieren'}).count(),0);assert.match(await page.locator('[data-live-facility-status]').innerText(),/keine neuen Meldungen/);
+await page.keyboard.press('Escape');
+await page.getByRole('button',{name:'Export',exact:true}).click();const exportButton=page.getByRole('button',{name:'JSON-Forschungspaket herunterladen'});
+await page.waitForFunction(()=>![...document.querySelectorAll('button')].find(b=>b.getAttribute('aria-label')==='JSON-Forschungspaket herunterladen')?.disabled,null,{timeout:120000});await exportButton.click();
+await page.waitForFunction(()=>window.__testDownloads.some(d=>d.name==='safespace-kontext.json'));
+const exported=await page.evaluate(()=>JSON.parse(window.__testDownloads.find(d=>d.name==='safespace-kontext.json').text));
+assert(exported.values.length>0);const encoded=JSON.stringify(exported);assert(encoded.includes('db:1040'));assert(encoded.includes('air_temperature'));
+await page.getByRole('button',{name:'Quellen & Methodik',exact:true}).click();await page.getByRole('heading',{name:'Importverlauf',exact:true}).waitFor();
+await page.getByRole('link',{name:'Bestandsübersicht als JSON'}).click();await page.waitForFunction(()=>window.__testDownloads.some(d=>d.name==='safespace-datenbestand.json'));
+const inventory=await page.evaluate(()=>JSON.parse(window.__testDownloads.find(d=>d.name==='safespace-datenbestand.json').text));assert(inventory.sources.length>10);
+const invalidLinks=await page.locator('a[href^="/"]').evaluateAll(links=>links.map(link=>link.getAttribute('href')).filter(href=>!href.startsWith('/safespace-bahnhof/')));assert.deepEqual(invalidLinks,[]);
+await page.getByRole('button',{name:'Bahnhofsauswahl',exact:true}).click();await page.getByRole('textbox',{name:'Bahnhof suchen'}).fill('Berlin');assert((await page.locator('.station-row').count())<=10);assert((await page.locator('.station-row').count())>0);
+await page.locator('.station-row-main').first().click();await page.getByRole('button',{name:'Stationsprofil',exact:true}).last().click();await page.locator('.profile-identity').waitFor();
+const secondStation=await page.locator('.profile-identity').innerText();assert.match(secondStation,/Berlin/);
+await page.reload();await page.waitForFunction(()=>!document.querySelector('.startup-enter')?.disabled);await page.getByRole('button',{name:'Zur Bahnhofsauswahl'}).click();assert.match(await page.locator('.map-profile-preview').innerText(),/Chemnitz/);
+assert.equal(await page.evaluate(()=>localStorage.length),0);assert.equal(await page.evaluate(()=>sessionStorage.length),0);
+const overviewDimensions=await page.evaluate(()=>({width:innerWidth,content:document.documentElement.scrollWidth,height:innerHeight,contentHeight:document.documentElement.scrollHeight}));assert(overviewDimensions.content<=overviewDimensions.width);
+await page.setViewportSize({width:390,height:844});await page.waitForTimeout(200);const mobileWidth=await page.evaluate(()=>document.documentElement.scrollWidth);assert(mobileWidth<=390);
+const viewer=await browser.newPage();await viewer.addInitScript(()=>{HTMLAnchorElement.prototype.click=function(){};});await viewer.goto(base+'download.html?file=%2Fdata%2Fstation-locations.json');await viewer.locator('#download:not([hidden])').waitFor();assert.match(await viewer.locator('#status').innerText(),/vollständig entpackt/);await viewer.close();
+const apiRequests=requests.filter(url=>new URL(url).pathname.startsWith('/api/')||new URL(url).port==='5173'||new URL(url).port==='5174');assert.deepEqual(apiRequests,[]);assert.deepEqual(errors,[]);assert.deepEqual(badResponses,[]);
+const result={verifiedAt:new Date().toISOString(),stationRows:10,initialStation:'Chemnitz',exportsVerified:['JSON research package','source inventory'],weatherIncluded:true,secondaryStationVerified:true,refreshReturnsToChemnitz:true,localStorageEntries:0,sessionStorageEntries:0,apiRequests:0,consoleErrors:errors,httpErrors:badResponses,overviewDimensions,mobileWidth};await writeFile(join(root,'audit/browser-verification.json'),JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result,null,2));
+}finally{await browser.close();}

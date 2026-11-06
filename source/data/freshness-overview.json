@@ -1,0 +1,379 @@
+{
+  "schemaVersion": "source-freshness-overview/1.0",
+  "generatedAt": "2026-09-25T09:48:10.315567+00:00",
+  "asOfDate": "2026-09-25",
+  "startDate": "2024-01-01",
+  "endDate": "2026-08-31",
+  "currentMapException": {
+    "scope": [
+      "station_catalogue",
+      "cartographic_locations",
+      "osm",
+      "bkg"
+    ],
+    "rule": "Use the latest available maps, station directory and static infrastructure inventories, even after the analysis cutoff. Preserve actual publication/capture dates; these snapshots do not reconstruct past conditions. Facility-status observations are not covered by this exception."
+  },
+  "latestReferenceSnapshots": {
+    "scope": [
+      "station_catalogue",
+      "cartographic_locations",
+      "stop_directory",
+      "osm",
+      "bkg",
+      "zensus",
+      "station_plans"
+    ],
+    "rule": "Use the latest available release of reference datasets. Preserve and display the actual reference, capture and publication dates, including dates before 2024 or after August 2026. A snapshot is not an observation time series and does not reconstruct historical conditions. Historical facility operating status and weather remain subject to the observation range; the separate liveFacilities rule governs explicitly requested current SIRI snapshots."
+  },
+  "timetable": {
+    "coverage": {
+      "start": "2026-08-01",
+      "end": "2026-08-31",
+      "timezone": "Europe/Berlin"
+    },
+    "counts": {
+      "catalogueStations": 5393,
+      "matchedStations": 5333,
+      "unmatchedStations": 60,
+      "conflictStations": 0,
+      "matchedBoardingStops": 22136,
+      "eventTemplates": 2695335,
+      "sourceStopTimesScanned": 39208525,
+      "ambiguousStopsExcluded": 0,
+      "netexProviderPackagesInspected": 0
+    },
+    "retainedPeriod": {
+      "startDate": "2026-08-01",
+      "endDate": "2026-08-31",
+      "dateBasis": "Departure instants from 1 through 31 August 2026 in Europe/Berlin. Earlier GTFS service-day identifiers may be retained only as necessary calendar support for overnight departures inside August; they do not permit July departures or query windows.",
+      "timezone": "Europe/Berlin"
+    },
+    "boundaryLimitations": {
+      "status": "retained_and_clipped",
+      "serviceSupportStartDate": "2026-07-30",
+      "potentiallyIncompleteCivilDates": [],
+      "reason": "Necessary prior-service calendars/templates retained for departures inside the civil-date window; all absolute queries are bounded by coverage."
+    }
+  },
+  "defaultAnalysisDate": "2026-08-31",
+  "scope": "Historical observations: 2024-01-01 through 2026-08-31 inclusive. Current SIRI facility status is retained separately with its own source timestamp; it never fills historical indicators. Timetable departure dates: 2026-08-01 through 2026-08-31 inclusive, Europe/Berlin. Latest reference snapshots, including census and stop directories, retain their actual source dates independently; not a continuous historical record.",
+  "stationCount": 5393,
+  "anchorCount": 1262,
+  "facilityCount": 0,
+  "stationsWithFacilities": 0,
+  "weatherProducts": [
+    {
+      "id": "air_temperature",
+      "title": "Lufttemperatur und relative Feuchte",
+      "stations": 503,
+      "firstObservation": "2024-01-01",
+      "latestObservation": "2026-08-31",
+      "stationsCovering2024Start": 494
+    },
+    {
+      "id": "cloud_type",
+      "title": "Wolkenarten",
+      "stations": 205,
+      "firstObservation": "2024-01-01",
+      "latestObservation": "2026-08-31",
+      "stationsCovering2024Start": 190
+    },
+    {
+      "id": "cloudiness",
+      "title": "Bewölkung",
+      "stations": 205,
+      "firstObservation": "2024-01-01",
+      "latestObservation": "2026-08-31",
+      "stationsCovering2024Start": 190
+    },
+    {
+      "id": "dew_point",
+      "title": "Taupunkt",
+      "stations": 597,
+      "firstObservation": "2024-01-01",
+      "latestObservation": "2026-08-31",
+      "stationsCovering2024Start": 570
+    },
+    {
+      "id": "extreme_wind",
+      "title": "Windspitzen",
+      "stations": 351,
+      "firstObservation": "2024-01-01",
+      "latestObservation": "2026-08-31",
+      "stationsCovering2024Start": 330
+    },
+    {
+      "id": "moisture",
+      "title": "Feuchte",
+      "stations": 597,
+      "firstObservation": "2024-01-01",
+      "latestObservation": "2026-08-31",
+      "stationsCovering2024Start": 564
+    },
+    {
+      "id": "precipitation",
+      "title": "Niederschlag",
+      "stations": 1395,
+      "firstObservation": "2024-01-01",
+      "latestObservation": "2026-08-31",
+      "stationsCovering2024Start": 1348
+    },
+    {
+      "id": "pressure",
+      "title": "Luftdruck",
+      "stations": 214,
+      "firstObservation": "2024-01-01",
+      "latestObservation": "2026-08-31",
+      "stationsCovering2024Start": 211
+    },
+    {
+      "id": "soil_temperature",
+      "title": "Bodentemperatur",
+      "stations": 320,
+      "firstObservation": "2024-01-01",
+      "latestObservation": "2026-08-31",
+      "stationsCovering2024Start": 313
+    },
+    {
+      "id": "solar",
+      "title": "Solarstrahlung",
+      "stations": 41,
+      "firstObservation": "2024-01-01",
+      "latestObservation": "2026-08-31",
+      "stationsCovering2024Start": 39
+    },
+    {
+      "id": "sun",
+      "title": "Sonnenscheindauer",
+      "stations": 197,
+      "firstObservation": "2024-01-01",
+      "latestObservation": "2026-08-31",
+      "stationsCovering2024Start": 196
+    },
+    {
+      "id": "visibility",
+      "title": "Sichtweite",
+      "stations": 204,
+      "firstObservation": "2024-01-01",
+      "latestObservation": "2026-08-31",
+      "stationsCovering2024Start": 192
+    },
+    {
+      "id": "weather_phenomena",
+      "title": "Wettererscheinungen",
+      "stations": 202,
+      "firstObservation": "2024-01-01",
+      "latestObservation": "2026-08-31",
+      "stationsCovering2024Start": 187
+    },
+    {
+      "id": "wind",
+      "title": "Wind",
+      "stations": 296,
+      "firstObservation": "2024-01-01",
+      "latestObservation": "2026-08-31",
+      "stationsCovering2024Start": 287
+    },
+    {
+      "id": "wind_synop",
+      "title": "Synoptischer Wind",
+      "stations": 343,
+      "firstObservation": "2024-01-01",
+      "latestObservation": "2026-08-31",
+      "stationsCovering2024Start": 335
+    }
+  ],
+  "sources": {
+    "openstation": {
+      "sourceId": "openstation",
+      "status": "verified_current_with_date_exclusions",
+      "statusLabel": "Inventar und separat datierter Anlagenstatus",
+      "checkedAt": "2026-09-25T09:47:05.659075+00:00",
+      "referenceLabel": "Stationsinventar 23.09.2026 · SIRI 25.09.2026",
+      "summary": "NeTEx-Inventar mit zusätzlichen Barrierefreiheitsangaben, Bahnsteigdetails, Hilfsangeboten und Zuständigkeiten. SIRI zeigt den zuletzt abgerufenen aktuellen Anlagenstatus separat vom historischen Analysedatum; Aktualisierung im lokalen Projekt vor einer neuen Veröffentlichung.",
+      "gaps": [
+        "Keine nativen historischen SIRI-/FaSta-Meldungen für 01.01.2024–31.08.2026 abgerufen. Aktuelle Meldungen rekonstruieren keine vergangenen Zustände. Fehlend oder unbekannt bedeutet weder funktionsfähig noch defekt."
+      ],
+      "evidenceUrl": "/data/freshness/openstation.json"
+    },
+    "cartographic_locations": {
+      "sourceId": "cartographic_locations",
+      "status": "updated",
+      "statusLabel": "Aktualisiert",
+      "checkedAt": "2026-09-23T17:59:15.631162+00:00",
+      "referenceLabel": "OSM 23.09.2026 · Trainline 21.09.2026",
+      "summary": "Neueste veröffentlichte Stationspositionen über exakte Kennungen zugeordnet; alternative Quellpositionen bleiben dokumentiert.",
+      "gaps": [
+        "Lindaunis bleibt ohne sichere Kartenposition. Kartenpositionen ersetzen keine Analyseanker."
+      ],
+      "evidenceUrl": "/data/freshness/cartographic_locations.json"
+    },
+    "osm": {
+      "sourceId": "osm",
+      "status": "updated",
+      "statusLabel": "Aktualisiert",
+      "checkedAt": "2026-09-23T18:16:02.459572+00:00",
+      "referenceLabel": "Kartierungsstand 22.09.2026",
+      "summary": "Neuester verfügbarer Deutschlandauszug lokal an den aktuellen Analyseankern ausgewertet.",
+      "gaps": [
+        "Kartierungsstand ist kein Vor-Ort-Prüfdatum. Keine vollständige Historie aller Kartenänderungen seit 2024; Relationen bleiben ausgeschlossen."
+      ],
+      "evidenceUrl": "/data/freshness/osm.json"
+    },
+    "bkg": {
+      "sourceId": "bkg",
+      "status": "current",
+      "statusLabel": "Neueste verfügbare Ausgabe",
+      "checkedAt": "2026-09-23T20:47:43.662864+00:00",
+      "referenceLabel": "Gebietsstand 31.12.2025",
+      "summary": "Alle fünf aktuellen VG1000-Layer erneut abgerufen und inhaltlich mit dem lokalen Bestand verglichen. Der jüngste im offiziellen Downloadkatalog angebotene Jahresstand ist 31.12.2025.",
+      "gaps": [
+        "Jahresstand 31.12.2025 ist die jüngste veröffentlichte Ausgabe; kein laufend gemessener Grenzverlauf."
+      ],
+      "evidenceUrl": "/data/freshness/bkg.json"
+    },
+    "delfi": {
+      "sourceId": "delfi",
+      "status": "partial",
+      "statusLabel": "Zeitlich begrenzter Teilbestand",
+      "checkedAt": "2026-09-23T20:59:51.117115+00:00",
+      "referenceLabel": "Fahrplan 01.08.2026–31.08.2026 · Export 08.08.2026 · ZHV 29.12.2025",
+      "summary": "Geplante deutschlandweite Abfahrten 01.08.2026–31.08.2026, aus DELFI-Export 08.08.2026 (öffentlicher ÖPNV-Atlas-Spiegel). Notwendige Vor-Fahrplantage nur für Abfahrten innerhalb August. ZHV: jüngster anonym zugänglicher offizieller Archivstand 2025-12-29; aktuelle geschützte Ausgabe nicht verfügbar.",
+      "gaps": [
+        "Die aktuelle offizielle ZHV-Ausgabe sowie geschützte DELFI-Fahrplanstände erfordern Registrierung; kein Konto verwendet oder angelegt.",
+        "Der Auguststand stammt aus einem öffentlichen Gemeinschaftsspiegel. Identität mit einer authentifizierten DELFI-Portaldatei ist nicht unabhängig bestätigt; Export 08.08.2026 beweist keine Berücksichtigung späterer August-Korrekturen.",
+        "Kein passendes August-NeTEx-Fahrplanarchiv öffentlich gefunden; September- und 2024/2025-Fahrpläne würden die gewünschte August-Abdeckung nicht vervollständigen.",
+        "Die aktuelle offizielle ZHV-Ausgabe erfordert Registrierung. Verwendet wird der erneut als jüngster anonym zugänglicher offizieller Archivstand geprüfte 2025-12-29.",
+        "60 Stationszuordnungen fehlen; Kalenderabdeckung ist keine Garantie für vollständige Verkehrsunternehmen, tatsächlich gefahrene Züge oder fehlerfreie Quelldaten."
+      ],
+      "evidenceUrl": "/data/freshness/delfi.json"
+    },
+    "dwd": {
+      "sourceId": "dwd",
+      "status": "current_for_retained_period",
+      "statusLabel": "Auf Analysezeitraum begrenzt",
+      "checkedAt": "2026-09-23T20:44:49.135401+00:00",
+      "referenceLabel": "Messungen bis 31.08.2026",
+      "summary": "Alle 15 stündlichen Produktgruppen auf 01.01.2024–31.08.2026 begrenzt. Spätere Meldungen aus den Archiven entfernt. Stationsbezogene Messlücken bleiben sichtbar.",
+      "gaps": [
+        "Zwischen verfügbaren Archiv-Zeitspannen bestehen 2 produkt- und stationsbezogene Lücken; genaue Zeiträume im Prüfnachweis.",
+        "Kein lückenloser Stundenbestand für jeden Messort. Produktweite Anfangs- und Enddaten bedeuten keine vollständige lokale Abdeckung."
+      ],
+      "evidenceUrl": "/data/freshness/dwd.json"
+    },
+    "zensus": {
+      "sourceId": "zensus",
+      "status": "current",
+      "statusLabel": "Neueste Referenzausgabe",
+      "checkedAt": "2026-09-23T20:51:30.360411+00:00",
+      "referenceLabel": "Zensusstichtag 15.05.2022",
+      "summary": "Alle aktuell amtlich angebotenen Zensus-Gitterpakete sind als neuester Referenzbestand gespeichert. Originalstichtag 15.05.2022 bleibt sichtbar; der Zeitraum 2024–August 2026 gilt für Beobachtungsreihen.",
+      "gaps": [
+        "Zensus-Stichtag 15.05.2022; keine Fortschreibung oder Beobachtungsreihe für 2024–2026.",
+        "Alle 50 angebotenen Rasterthemen und Zensus-Verwaltungsgrenzen sind gespeichert; Regionaltabellen und individuelle Sonderauswertungen gehören nicht zu diesem Rasterarchiv.",
+        "Veröffentlichte Werte sind statistisch geschützt. Fehlende Zellen bleiben unbekannt; keine Nullsetzung."
+      ],
+      "evidenceUrl": "/data/freshness/zensus.json"
+    },
+    "facility_history": {
+      "sourceId": "facility_history",
+      "status": "partial_period_aggregate_history",
+      "statusLabel": "Teilzeitraum · veröffentlichte Auswertung",
+      "checkedAt": "2026-09-23T20:53:06.699873+00:00",
+      "referenceLabel": "01.10.2025–31.03.2026",
+      "summary": "182 bundesweite Tageswerte für 01.10.2025–31.03.2026: Störungsanteile für Aufzüge und Rolltreppen in Deutschland. Keine vollständige Anlagenstatushistorie.",
+      "gaps": [
+        "Für 01.01.2024–30.09.2025 und 01.04.–31.08.2026 enthält diese veröffentlichte WDR-Tabelle keine Beobachtungen.",
+        "Native Fünf-Minuten-Meldungen einzelner Anlagen und stationsbezogene Auswertungen sind nicht enthalten."
+      ],
+      "evidenceUrl": "/data/freshness/facility_history.json"
+    },
+    "police_statistics": {
+      "sourceId": "police_statistics",
+      "status": "partial",
+      "statusLabel": "Veröffentlichter Teilbestand",
+      "checkedAt": "2026-09-23T21:36:03.051394+00:00",
+      "referenceLabel": "Berichtsjahre 2024 und 2025",
+      "summary": "Bundesweite Deliktszahlen an Bahnhöfen und in Zügen für die Berichtsjahre 2024 und 2025.",
+      "gaps": [
+        "Nur bundesweite Summen 2024 und 2025; keine Beobachtungen für Januar bis August 2026.",
+        "Massendelikte 2024/2025 sowie Betäubungsmitteldelikte 2024 fehlen laut Quelle.",
+        "Fallzahlen sind ohne Nutzungsnenner keine Risikoraten; sie unterliegen Nachmeldungen und Änderungen der Erfassung.",
+        "Bundesweite Summen beschreiben keinen einzelnen Bahnhof.",
+        "Original-PDF-Download lokal durch TLS-Verbindungsfehler nicht möglich; nutzbare Tabellenauszüge aus der offiziellen PDF-Webextraktion wurden verifiziert und gespeichert."
+      ],
+      "evidenceUrl": "/data/freshness/police_statistics.json"
+    },
+    "skid": {
+      "sourceId": "skid",
+      "status": "partial",
+      "statusLabel": "Veröffentlichter Teilbestand",
+      "checkedAt": "2026-09-23T21:36:03.051394+00:00",
+      "referenceLabel": "19.02.2024–07.06.2024",
+      "summary": "Gewichtete nationale Befragungsergebnisse zum Sicherheitsgefühl am Tag und in der Nacht.",
+      "gaps": [
+        "Nur die 2024 erhobenen Sicherheitsgefühle; keine Opfererfahrungen mit Bezugsjahr 2023 und keine Vergleichswerte 2020.",
+        "Subjektive nationale Angaben können nicht als Zustand oder Kriminalitätsrate einer einzelnen Station gelesen werden.",
+        "Veröffentlichte Gruppen-Stichprobenumfänge sind keine Reisendenzahlen; Konfidenzintervall-Endpunkte nicht numerisch übernommen."
+      ],
+      "evidenceUrl": "/data/freshness/skid.json"
+    },
+    "operational_archive": {
+      "sourceId": "operational_archive",
+      "status": "integrated_with_coverage_limits",
+      "statusLabel": "Veröffentlichter Teilbestand",
+      "checkedAt": "2026-09-23T21:35:56.864793+00:00",
+      "referenceLabel": "01.08.2026–31.08.2026",
+      "summary": "14.516.986 archivierte Zughalte im August 2026; 5.215 Bahnhöfe eindeutig über EVA zugeordnet. Gemeldete Änderungen und Ausfallkennzeichen mit dokumentierten Planzeit-Ersetzungen. keine vollständige Ist-Zeitmessung.",
+      "gaps": [
+        "Community-Archiv von Piet Brömmel aus der DB Timetables API. Es enthält gemeldete Änderungen und Ausfallkennzeichen; geänderte Zeiten sind keine unabhängig gemessenen tatsächlichen Ankunfts- oder Abfahrtszeiten.",
+        "Die Aufbereitung des Herausgebers ersetzt fehlende Änderungszeiten durch Planzeiten und fehlende Ausfallkennzeichen durch false. Null Minuten beziehungsweise kein Ausfallkennzeichen belegen deshalb weder Pünktlichkeit noch lückenlose Beobachtung. Welche Werte auf dieser Ersetzung beruhen, ist im Monatsarchiv nicht mehr feststellbar.",
+        "Berücksichtigt wird ausschließlich August 2026 nach dem Archivfeld time in deutscher Ortszeit (Europe/Berlin): geänderte Abfahrt, ersatzweise geänderte Ankunft, mit den genannten Planzeit-Ersetzungen. Die Tageszuordnung entspricht diesem Archivfeld, nicht zwingend dem geplanten Verkehrstag.",
+        "Ein Datensatz beschreibt einen archivierten Zughalt. Die Verspätung verwendet die Abfahrt, ersatzweise die Ankunft. Ausfallkennzeichen für Ankunft und Abfahrt können sich überlappen; ein ausgefallener Zughalt wird nicht in Verspätungsmittelwerte einbezogen.",
+        "Zuordnung ausschließlich über eindeutige EVA-Kennungen des aktuellen Bahnhofskatalogs; führende Null-Auffüllung wird vereinheitlicht, die Originalkennungen bleiben erhalten. Mehrdeutige und fehlende Zuordnungen bleiben separat dokumentiert. Fehlende Bahnhöfe oder Tage sind unbekannt, keine Nullwerte.",
+        "Erfasstes Aufkommen ist weder eine Fahrgastzahl noch ein vollständiger Sollfahrplan. Mindestens ein Datensatz an jedem Tag beweist keine vollständige zeitliche Erfassung. Das verarbeitete Monatsarchiv enthält keine einzelnen Abrufzeitpunkte oder Ausfälle der Datensammlung."
+      ],
+      "evidenceUrl": "/data/freshness/operational_archive.json"
+    },
+    "station_plans": {
+      "sourceId": "station_plans",
+      "status": "retrieved_partial_coverage",
+      "statusLabel": "Neueste zugängliche Referenzdaten",
+      "checkedAt": "2026-09-23T21:55:58.850844+00:00",
+      "referenceLabel": "Quellenstände je Datei dokumentiert",
+      "summary": "Offizielle PDF-Lagepläne unterstützen die Zuordnung von Bahnsteigen, Zugängen, Unterführungen, Aufzügen und Servicebereichen.",
+      "gaps": [
+        "HTTP 404 bedeutet: Am geprüften DB-Downloadendpunkt für die StaDa-ID wurde kein PDF bereitgestellt; andere Publikationsorte oder interaktive Karten sind dadurch nicht ausgeschlossen.",
+        "Pläne zeigen den aktuellen veröffentlichten Referenzstand; sie rekonstruieren keinen Zustand von 2024 bis August 2026.",
+        "Ein fehlender Plan ist unbekannte Datenverfügbarkeit, nicht das Fehlen von Zugängen oder Ausstattung.",
+        "Ein planbezogenes Erhebungsdatum ist nicht einheitlich veröffentlicht. HTTP- und PDF-Dateidaten bleiben davon getrennt.",
+        "Keine offene Nachnutzungslizenz ermittelt; Quellenangabe und Originaldokument erhalten."
+      ],
+      "evidenceUrl": "/data/freshness/station_plans.json"
+    },
+    "mapillary": {
+      "sourceId": "mapillary",
+      "status": "access_required",
+      "statusLabel": "Zugang erforderlich",
+      "checkedAt": "2026-09-23T21:32:05.876035+00:00",
+      "referenceLabel": "Keine Beobachtungen abgerufen",
+      "summary": "Straßenbilder könnten sichtbare Zugänge, Hindernisse und Zustand zum Aufnahmezeitpunkt ergänzen. Es wurden keine Bilder abgerufen.",
+      "gaps": [
+        "Für den dokumentierten automatischen Bildabruf ist ein Zugriffstoken erforderlich; ein solcher wurde nicht bereitgestellt.",
+        "Keine Bilder oder Bildmetadaten importiert. Die Quelle liefert derzeit keine Werte und keine Stationszuordnung.",
+        "Bei späterer Freigabe ausschließlich Aufnahmen vom 01.01.2024 bis 31.08.2026; Aufnahmezeit und Lizenz je Bild erhalten. Bildhelligkeit ist keine Lux-Messung."
+      ],
+      "evidenceUrl": "/data/freshness/mapillary.json"
+    },
+    "field": {
+      "sourceId": "field",
+      "status": "not_collected",
+      "statusLabel": "Nicht erhoben",
+      "checkedAt": null,
+      "referenceLabel": "Kein Erhebungsdatum",
+      "summary": "Keine freigegebenen eigenen Studienbeobachtungen vorhanden. Diese Quelle bietet keinen öffentlichen Download.",
+      "gaps": [],
+      "evidenceUrl": null
+    }
+  }
+}

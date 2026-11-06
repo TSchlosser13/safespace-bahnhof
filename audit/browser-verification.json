@@ -1,0 +1,24 @@
+{
+  "verifiedAt": "2026-09-27T23:01:16.339Z",
+  "stationRows": 10,
+  "initialStation": "Chemnitz",
+  "exportsVerified": [
+    "JSON research package",
+    "source inventory"
+  ],
+  "weatherIncluded": true,
+  "secondaryStationVerified": true,
+  "refreshReturnsToChemnitz": true,
+  "localStorageEntries": 0,
+  "sessionStorageEntries": 0,
+  "apiRequests": 0,
+  "consoleErrors": [],
+  "httpErrors": [],
+  "overviewDimensions": {
+    "width": 1440,
+    "content": 1440,
+    "height": 1000,
+    "contentHeight": 1000
+  },
+  "mobileWidth": 390
+}

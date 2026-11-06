@@ -1,0 +1,2676 @@
+{
+  "schemaVersion": "source-retrieval-inventory/1.0",
+  "generatedAt": "2026-09-25T09:48:15.585893+00:00",
+  "bytesPerMB": 1000000,
+  "sizeDefinition": "Gemessene Größen des verbleibenden Bestands auf Datenträger. DWD-Quelldateien sind auf 01.01.2024–31.08.2026 begrenzt; GTFS-Abfahrten sind auf 01.–31.08.2026 begrenzt; notwendige frühere Verkehrstage bleiben als Kalenderbezüge erhalten; ursprüngliche Download-Prüfsummen bleiben als Herkunftsnachweis erhalten. Der aktuelle OSM-PBF ist ein lokal mit offizieller Änderungsdatei fortgeschriebener Auszug; Basis, Änderung und Ergebnis sind getrennt nachgewiesen. 1 MB = 1.000.000 Byte. ZIP/7z/GZIP/PBF bleiben komprimiert; Metadaten sind enthalten. Aufbereitete Anwendungsdaten inklusive lokalem DWD-Index, Filterprüfprotokoll und veröffentlichten Aktualitäts-Prüfnachweisen werden separat gezählt. Die gemeinsame Aktualitätsübersicht wird einmal bei OpenStation gezählt; ausgeschlossene Quellen enthalten nur Prüfnachweise, keine Beobachtungen. Gemeinsame SIRI/BKG-Stationsdateien sind OpenStation zugeordnet, gemeinsame Geokontextdateien dem Zensus; keine doppelte Zählung. Alte Versionen, temporäre Downloads und Build-Kopien zählen nicht doppelt.",
+  "freshness": {
+    "schemaVersion": "source-freshness-overview/1.0",
+    "generatedAt": "2026-09-25T09:48:10.315567+00:00",
+    "asOfDate": "2026-09-25",
+    "startDate": "2024-01-01",
+    "endDate": "2026-08-31",
+    "currentMapException": {
+      "scope": [
+        "station_catalogue",
+        "cartographic_locations",
+        "osm",
+        "bkg"
+      ],
+      "rule": "Use the latest available maps, station directory and static infrastructure inventories, even after the analysis cutoff. Preserve actual publication/capture dates; these snapshots do not reconstruct past conditions. Facility-status observations are not covered by this exception."
+    },
+    "latestReferenceSnapshots": {
+      "scope": [
+        "station_catalogue",
+        "cartographic_locations",
+        "stop_directory",
+        "osm",
+        "bkg",
+        "zensus",
+        "station_plans"
+      ],
+      "rule": "Use the latest available release of reference datasets. Preserve and display the actual reference, capture and publication dates, including dates before 2024 or after August 2026. A snapshot is not an observation time series and does not reconstruct historical conditions. Historical facility operating status and weather remain subject to the observation range; the separate liveFacilities rule governs explicitly requested current SIRI snapshots."
+    },
+    "timetable": {
+      "coverage": {
+        "start": "2026-08-01",
+        "end": "2026-08-31",
+        "timezone": "Europe/Berlin"
+      },
+      "counts": {
+        "catalogueStations": 5393,
+        "matchedStations": 5333,
+        "unmatchedStations": 60,
+        "conflictStations": 0,
+        "matchedBoardingStops": 22136,
+        "eventTemplates": 2695335,
+        "sourceStopTimesScanned": 39208525,
+        "ambiguousStopsExcluded": 0,
+        "netexProviderPackagesInspected": 0
+      },
+      "retainedPeriod": {
+        "startDate": "2026-08-01",
+        "endDate": "2026-08-31",
+        "dateBasis": "Departure instants from 1 through 31 August 2026 in Europe/Berlin. Earlier GTFS service-day identifiers may be retained only as necessary calendar support for overnight departures inside August; they do not permit July departures or query windows.",
+        "timezone": "Europe/Berlin"
+      },
+      "boundaryLimitations": {
+        "status": "retained_and_clipped",
+        "serviceSupportStartDate": "2026-07-30",
+        "potentiallyIncompleteCivilDates": [],
+        "reason": "Necessary prior-service calendars/templates retained for departures inside the civil-date window; all absolute queries are bounded by coverage."
+      }
+    },
+    "defaultAnalysisDate": "2026-08-31",
+    "scope": "Historical observations: 2024-01-01 through 2026-08-31 inclusive. Current SIRI facility status is retained separately with its own source timestamp; it never fills historical indicators. Timetable departure dates: 2026-08-01 through 2026-08-31 inclusive, Europe/Berlin. Latest reference snapshots, including census and stop directories, retain their actual source dates independently; not a continuous historical record.",
+    "stationCount": 5393,
+    "anchorCount": 1262,
+    "facilityCount": 0,
+    "stationsWithFacilities": 0,
+    "weatherProducts": [
+      {
+        "id": "air_temperature",
+        "title": "Lufttemperatur und relative Feuchte",
+        "stations": 503,
+        "firstObservation": "2024-01-01",
+        "latestObservation": "2026-08-31",
+        "stationsCovering2024Start": 494
+      },
+      {
+        "id": "cloud_type",
+        "title": "Wolkenarten",
+        "stations": 205,
+        "firstObservation": "2024-01-01",
+        "latestObservation": "2026-08-31",
+        "stationsCovering2024Start": 190
+      },
+      {
+        "id": "cloudiness",
+        "title": "Bewölkung",
+        "stations": 205,
+        "firstObservation": "2024-01-01",
+        "latestObservation": "2026-08-31",
+        "stationsCovering2024Start": 190
+      },
+      {
+        "id": "dew_point",
+        "title": "Taupunkt",
+        "stations": 597,
+        "firstObservation": "2024-01-01",
+        "latestObservation": "2026-08-31",
+        "stationsCovering2024Start": 570
+      },
+      {
+        "id": "extreme_wind",
+        "title": "Windspitzen",
+        "stations": 351,
+        "firstObservation": "2024-01-01",
+        "latestObservation": "2026-08-31",
+        "stationsCovering2024Start": 330
+      },
+      {
+        "id": "moisture",
+        "title": "Feuchte",
+        "stations": 597,
+        "firstObservation": "2024-01-01",
+        "latestObservation": "2026-08-31",
+        "stationsCovering2024Start": 564
+      },
+      {
+        "id": "precipitation",
+        "title": "Niederschlag",
+        "stations": 1395,
+        "firstObservation": "2024-01-01",
+        "latestObservation": "2026-08-31",
+        "stationsCovering2024Start": 1348
+      },
+      {
+        "id": "pressure",
+        "title": "Luftdruck",
+        "stations": 214,
+        "firstObservation": "2024-01-01",
+        "latestObservation": "2026-08-31",
+        "stationsCovering2024Start": 211
+      },
+      {
+        "id": "soil_temperature",
+        "title": "Bodentemperatur",
+        "stations": 320,
+        "firstObservation": "2024-01-01",
+        "latestObservation": "2026-08-31",
+        "stationsCovering2024Start": 313
+      },
+      {
+        "id": "solar",
+        "title": "Solarstrahlung",
+        "stations": 41,
+        "firstObservation": "2024-01-01",
+        "latestObservation": "2026-08-31",
+        "stationsCovering2024Start": 39
+      },
+      {
+        "id": "sun",
+        "title": "Sonnenscheindauer",
+        "stations": 197,
+        "firstObservation": "2024-01-01",
+        "latestObservation": "2026-08-31",
+        "stationsCovering2024Start": 196
+      },
+      {
+        "id": "visibility",
+        "title": "Sichtweite",
+        "stations": 204,
+        "firstObservation": "2024-01-01",
+        "latestObservation": "2026-08-31",
+        "stationsCovering2024Start": 192
+      },
+      {
+        "id": "weather_phenomena",
+        "title": "Wettererscheinungen",
+        "stations": 202,
+        "firstObservation": "2024-01-01",
+        "latestObservation": "2026-08-31",
+        "stationsCovering2024Start": 187
+      },
+      {
+        "id": "wind",
+        "title": "Wind",
+        "stations": 296,
+        "firstObservation": "2024-01-01",
+        "latestObservation": "2026-08-31",
+        "stationsCovering2024Start": 287
+      },
+      {
+        "id": "wind_synop",
+        "title": "Synoptischer Wind",
+        "stations": 343,
+        "firstObservation": "2024-01-01",
+        "latestObservation": "2026-08-31",
+        "stationsCovering2024Start": 335
+      }
+    ],
+    "sources": {
+      "openstation": {
+        "sourceId": "openstation",
+        "status": "verified_current_with_date_exclusions",
+        "statusLabel": "Inventar und separat datierter Anlagenstatus",
+        "checkedAt": "2026-09-25T09:47:05.659075+00:00",
+        "referenceLabel": "Stationsinventar 23.09.2026 · SIRI 25.09.2026",
+        "summary": "NeTEx-Inventar mit zusätzlichen Barrierefreiheitsangaben, Bahnsteigdetails, Hilfsangeboten und Zuständigkeiten. SIRI zeigt den zuletzt abgerufenen aktuellen Anlagenstatus separat vom historischen Analysedatum; Aktualisierung im lokalen Projekt vor einer neuen Veröffentlichung.",
+        "gaps": [
+          "Keine nativen historischen SIRI-/FaSta-Meldungen für 01.01.2024–31.08.2026 abgerufen. Aktuelle Meldungen rekonstruieren keine vergangenen Zustände. Fehlend oder unbekannt bedeutet weder funktionsfähig noch defekt."
+        ],
+        "evidenceUrl": "/data/freshness/openstation.json"
+      },
+      "cartographic_locations": {
+        "sourceId": "cartographic_locations",
+        "status": "updated",
+        "statusLabel": "Aktualisiert",
+        "checkedAt": "2026-09-23T17:59:15.631162+00:00",
+        "referenceLabel": "OSM 23.09.2026 · Trainline 21.09.2026",
+        "summary": "Neueste veröffentlichte Stationspositionen über exakte Kennungen zugeordnet; alternative Quellpositionen bleiben dokumentiert.",
+        "gaps": [
+          "Lindaunis bleibt ohne sichere Kartenposition. Kartenpositionen ersetzen keine Analyseanker."
+        ],
+        "evidenceUrl": "/data/freshness/cartographic_locations.json"
+      },
+      "osm": {
+        "sourceId": "osm",
+        "status": "updated",
+        "statusLabel": "Aktualisiert",
+        "checkedAt": "2026-09-23T18:16:02.459572+00:00",
+        "referenceLabel": "Kartierungsstand 22.09.2026",
+        "summary": "Neuester verfügbarer Deutschlandauszug lokal an den aktuellen Analyseankern ausgewertet.",
+        "gaps": [
+          "Kartierungsstand ist kein Vor-Ort-Prüfdatum. Keine vollständige Historie aller Kartenänderungen seit 2024; Relationen bleiben ausgeschlossen."
+        ],
+        "evidenceUrl": "/data/freshness/osm.json"
+      },
+      "bkg": {
+        "sourceId": "bkg",
+        "status": "current",
+        "statusLabel": "Neueste verfügbare Ausgabe",
+        "checkedAt": "2026-09-23T20:47:43.662864+00:00",
+        "referenceLabel": "Gebietsstand 31.12.2025",
+        "summary": "Alle fünf aktuellen VG1000-Layer erneut abgerufen und inhaltlich mit dem lokalen Bestand verglichen. Der jüngste im offiziellen Downloadkatalog angebotene Jahresstand ist 31.12.2025.",
+        "gaps": [
+          "Jahresstand 31.12.2025 ist die jüngste veröffentlichte Ausgabe; kein laufend gemessener Grenzverlauf."
+        ],
+        "evidenceUrl": "/data/freshness/bkg.json"
+      },
+      "delfi": {
+        "sourceId": "delfi",
+        "status": "partial",
+        "statusLabel": "Zeitlich begrenzter Teilbestand",
+        "checkedAt": "2026-09-23T20:59:51.117115+00:00",
+        "referenceLabel": "Fahrplan 01.08.2026–31.08.2026 · Export 08.08.2026 · ZHV 29.12.2025",
+        "summary": "Geplante deutschlandweite Abfahrten 01.08.2026–31.08.2026, aus DELFI-Export 08.08.2026 (öffentlicher ÖPNV-Atlas-Spiegel). Notwendige Vor-Fahrplantage nur für Abfahrten innerhalb August. ZHV: jüngster anonym zugänglicher offizieller Archivstand 2025-12-29; aktuelle geschützte Ausgabe nicht verfügbar.",
+        "gaps": [
+          "Die aktuelle offizielle ZHV-Ausgabe sowie geschützte DELFI-Fahrplanstände erfordern Registrierung; kein Konto verwendet oder angelegt.",
+          "Der Auguststand stammt aus einem öffentlichen Gemeinschaftsspiegel. Identität mit einer authentifizierten DELFI-Portaldatei ist nicht unabhängig bestätigt; Export 08.08.2026 beweist keine Berücksichtigung späterer August-Korrekturen.",
+          "Kein passendes August-NeTEx-Fahrplanarchiv öffentlich gefunden; September- und 2024/2025-Fahrpläne würden die gewünschte August-Abdeckung nicht vervollständigen.",
+          "Die aktuelle offizielle ZHV-Ausgabe erfordert Registrierung. Verwendet wird der erneut als jüngster anonym zugänglicher offizieller Archivstand geprüfte 2025-12-29.",
+          "60 Stationszuordnungen fehlen; Kalenderabdeckung ist keine Garantie für vollständige Verkehrsunternehmen, tatsächlich gefahrene Züge oder fehlerfreie Quelldaten."
+        ],
+        "evidenceUrl": "/data/freshness/delfi.json"
+      },
+      "dwd": {
+        "sourceId": "dwd",
+        "status": "current_for_retained_period",
+        "statusLabel": "Auf Analysezeitraum begrenzt",
+        "checkedAt": "2026-09-23T20:44:49.135401+00:00",
+        "referenceLabel": "Messungen bis 31.08.2026",
+        "summary": "Alle 15 stündlichen Produktgruppen auf 01.01.2024–31.08.2026 begrenzt. Spätere Meldungen aus den Archiven entfernt. Stationsbezogene Messlücken bleiben sichtbar.",
+        "gaps": [
+          "Zwischen verfügbaren Archiv-Zeitspannen bestehen 2 produkt- und stationsbezogene Lücken; genaue Zeiträume im Prüfnachweis.",
+          "Kein lückenloser Stundenbestand für jeden Messort. Produktweite Anfangs- und Enddaten bedeuten keine vollständige lokale Abdeckung."
+        ],
+        "evidenceUrl": "/data/freshness/dwd.json"
+      },
+      "zensus": {
+        "sourceId": "zensus",
+        "status": "current",
+        "statusLabel": "Neueste Referenzausgabe",
+        "checkedAt": "2026-09-23T20:51:30.360411+00:00",
+        "referenceLabel": "Zensusstichtag 15.05.2022",
+        "summary": "Alle aktuell amtlich angebotenen Zensus-Gitterpakete sind als neuester Referenzbestand gespeichert. Originalstichtag 15.05.2022 bleibt sichtbar; der Zeitraum 2024–August 2026 gilt für Beobachtungsreihen.",
+        "gaps": [
+          "Zensus-Stichtag 15.05.2022; keine Fortschreibung oder Beobachtungsreihe für 2024–2026.",
+          "Alle 50 angebotenen Rasterthemen und Zensus-Verwaltungsgrenzen sind gespeichert; Regionaltabellen und individuelle Sonderauswertungen gehören nicht zu diesem Rasterarchiv.",
+          "Veröffentlichte Werte sind statistisch geschützt. Fehlende Zellen bleiben unbekannt; keine Nullsetzung."
+        ],
+        "evidenceUrl": "/data/freshness/zensus.json"
+      },
+      "facility_history": {
+        "sourceId": "facility_history",
+        "status": "partial_period_aggregate_history",
+        "statusLabel": "Teilzeitraum · veröffentlichte Auswertung",
+        "checkedAt": "2026-09-23T20:53:06.699873+00:00",
+        "referenceLabel": "01.10.2025–31.03.2026",
+        "summary": "182 bundesweite Tageswerte für 01.10.2025–31.03.2026: Störungsanteile für Aufzüge und Rolltreppen in Deutschland. Keine vollständige Anlagenstatushistorie.",
+        "gaps": [
+          "Für 01.01.2024–30.09.2025 und 01.04.–31.08.2026 enthält diese veröffentlichte WDR-Tabelle keine Beobachtungen.",
+          "Native Fünf-Minuten-Meldungen einzelner Anlagen und stationsbezogene Auswertungen sind nicht enthalten."
+        ],
+        "evidenceUrl": "/data/freshness/facility_history.json"
+      },
+      "police_statistics": {
+        "sourceId": "police_statistics",
+        "status": "partial",
+        "statusLabel": "Veröffentlichter Teilbestand",
+        "checkedAt": "2026-09-23T21:36:03.051394+00:00",
+        "referenceLabel": "Berichtsjahre 2024 und 2025",
+        "summary": "Bundesweite Deliktszahlen an Bahnhöfen und in Zügen für die Berichtsjahre 2024 und 2025.",
+        "gaps": [
+          "Nur bundesweite Summen 2024 und 2025; keine Beobachtungen für Januar bis August 2026.",
+          "Massendelikte 2024/2025 sowie Betäubungsmitteldelikte 2024 fehlen laut Quelle.",
+          "Fallzahlen sind ohne Nutzungsnenner keine Risikoraten; sie unterliegen Nachmeldungen und Änderungen der Erfassung.",
+          "Bundesweite Summen beschreiben keinen einzelnen Bahnhof.",
+          "Original-PDF-Download lokal durch TLS-Verbindungsfehler nicht möglich; nutzbare Tabellenauszüge aus der offiziellen PDF-Webextraktion wurden verifiziert und gespeichert."
+        ],
+        "evidenceUrl": "/data/freshness/police_statistics.json"
+      },
+      "skid": {
+        "sourceId": "skid",
+        "status": "partial",
+        "statusLabel": "Veröffentlichter Teilbestand",
+        "checkedAt": "2026-09-23T21:36:03.051394+00:00",
+        "referenceLabel": "19.02.2024–07.06.2024",
+        "summary": "Gewichtete nationale Befragungsergebnisse zum Sicherheitsgefühl am Tag und in der Nacht.",
+        "gaps": [
+          "Nur die 2024 erhobenen Sicherheitsgefühle; keine Opfererfahrungen mit Bezugsjahr 2023 und keine Vergleichswerte 2020.",
+          "Subjektive nationale Angaben können nicht als Zustand oder Kriminalitätsrate einer einzelnen Station gelesen werden.",
+          "Veröffentlichte Gruppen-Stichprobenumfänge sind keine Reisendenzahlen; Konfidenzintervall-Endpunkte nicht numerisch übernommen."
+        ],
+        "evidenceUrl": "/data/freshness/skid.json"
+      },
+      "operational_archive": {
+        "sourceId": "operational_archive",
+        "status": "integrated_with_coverage_limits",
+        "statusLabel": "Veröffentlichter Teilbestand",
+        "checkedAt": "2026-09-23T21:35:56.864793+00:00",
+        "referenceLabel": "01.08.2026–31.08.2026",
+        "summary": "14.516.986 archivierte Zughalte im August 2026; 5.215 Bahnhöfe eindeutig über EVA zugeordnet. Gemeldete Änderungen und Ausfallkennzeichen mit dokumentierten Planzeit-Ersetzungen. keine vollständige Ist-Zeitmessung.",
+        "gaps": [
+          "Community-Archiv von Piet Brömmel aus der DB Timetables API. Es enthält gemeldete Änderungen und Ausfallkennzeichen; geänderte Zeiten sind keine unabhängig gemessenen tatsächlichen Ankunfts- oder Abfahrtszeiten.",
+          "Die Aufbereitung des Herausgebers ersetzt fehlende Änderungszeiten durch Planzeiten und fehlende Ausfallkennzeichen durch false. Null Minuten beziehungsweise kein Ausfallkennzeichen belegen deshalb weder Pünktlichkeit noch lückenlose Beobachtung. Welche Werte auf dieser Ersetzung beruhen, ist im Monatsarchiv nicht mehr feststellbar.",
+          "Berücksichtigt wird ausschließlich August 2026 nach dem Archivfeld time in deutscher Ortszeit (Europe/Berlin): geänderte Abfahrt, ersatzweise geänderte Ankunft, mit den genannten Planzeit-Ersetzungen. Die Tageszuordnung entspricht diesem Archivfeld, nicht zwingend dem geplanten Verkehrstag.",
+          "Ein Datensatz beschreibt einen archivierten Zughalt. Die Verspätung verwendet die Abfahrt, ersatzweise die Ankunft. Ausfallkennzeichen für Ankunft und Abfahrt können sich überlappen; ein ausgefallener Zughalt wird nicht in Verspätungsmittelwerte einbezogen.",
+          "Zuordnung ausschließlich über eindeutige EVA-Kennungen des aktuellen Bahnhofskatalogs; führende Null-Auffüllung wird vereinheitlicht, die Originalkennungen bleiben erhalten. Mehrdeutige und fehlende Zuordnungen bleiben separat dokumentiert. Fehlende Bahnhöfe oder Tage sind unbekannt, keine Nullwerte.",
+          "Erfasstes Aufkommen ist weder eine Fahrgastzahl noch ein vollständiger Sollfahrplan. Mindestens ein Datensatz an jedem Tag beweist keine vollständige zeitliche Erfassung. Das verarbeitete Monatsarchiv enthält keine einzelnen Abrufzeitpunkte oder Ausfälle der Datensammlung."
+        ],
+        "evidenceUrl": "/data/freshness/operational_archive.json"
+      },
+      "station_plans": {
+        "sourceId": "station_plans",
+        "status": "retrieved_partial_coverage",
+        "statusLabel": "Neueste zugängliche Referenzdaten",
+        "checkedAt": "2026-09-23T21:55:58.850844+00:00",
+        "referenceLabel": "Quellenstände je Datei dokumentiert",
+        "summary": "Offizielle PDF-Lagepläne unterstützen die Zuordnung von Bahnsteigen, Zugängen, Unterführungen, Aufzügen und Servicebereichen.",
+        "gaps": [
+          "HTTP 404 bedeutet: Am geprüften DB-Downloadendpunkt für die StaDa-ID wurde kein PDF bereitgestellt; andere Publikationsorte oder interaktive Karten sind dadurch nicht ausgeschlossen.",
+          "Pläne zeigen den aktuellen veröffentlichten Referenzstand; sie rekonstruieren keinen Zustand von 2024 bis August 2026.",
+          "Ein fehlender Plan ist unbekannte Datenverfügbarkeit, nicht das Fehlen von Zugängen oder Ausstattung.",
+          "Ein planbezogenes Erhebungsdatum ist nicht einheitlich veröffentlicht. HTTP- und PDF-Dateidaten bleiben davon getrennt.",
+          "Keine offene Nachnutzungslizenz ermittelt; Quellenangabe und Originaldokument erhalten."
+        ],
+        "evidenceUrl": "/data/freshness/station_plans.json"
+      },
+      "mapillary": {
+        "sourceId": "mapillary",
+        "status": "access_required",
+        "statusLabel": "Zugang erforderlich",
+        "checkedAt": "2026-09-23T21:32:05.876035+00:00",
+        "referenceLabel": "Keine Beobachtungen abgerufen",
+        "summary": "Straßenbilder könnten sichtbare Zugänge, Hindernisse und Zustand zum Aufnahmezeitpunkt ergänzen. Es wurden keine Bilder abgerufen.",
+        "gaps": [
+          "Für den dokumentierten automatischen Bildabruf ist ein Zugriffstoken erforderlich; ein solcher wurde nicht bereitgestellt.",
+          "Keine Bilder oder Bildmetadaten importiert. Die Quelle liefert derzeit keine Werte und keine Stationszuordnung.",
+          "Bei späterer Freigabe ausschließlich Aufnahmen vom 01.01.2024 bis 31.08.2026; Aufnahmezeit und Lizenz je Bild erhalten. Bildhelligkeit ist keine Lux-Messung."
+        ],
+        "evidenceUrl": "/data/freshness/mapillary.json"
+      },
+      "field": {
+        "sourceId": "field",
+        "status": "not_collected",
+        "statusLabel": "Nicht erhoben",
+        "checkedAt": null,
+        "referenceLabel": "Kein Erhebungsdatum",
+        "summary": "Keine freigegebenen eigenen Studienbeobachtungen vorhanden. Diese Quelle bietet keinen öffentlichen Download.",
+        "gaps": [],
+        "evidenceUrl": null
+      }
+    }
+  },
+  "retentionPolicy": {
+    "schemaVersion": "source-retention-policy/1.2",
+    "liveFacilities": {
+      "authorizedAt": "2026-09-25",
+      "scope": "OpenStation SIRI FM current facility-status observations",
+      "rule": "Retain and display the latest explicitly retrieved SIRI snapshot separately from historical analysis. Preserve source and retrieval timestamps; never use current status as evidence for the historical analysis date. Refresh only on explicit request, not on a background schedule.",
+      "directory": ".data/retrieval/openstation-live",
+      "preparedPath": "public/data/integration/siri-live.json"
+    },
+    "years": [
+      2024,
+      2025,
+      2026
+    ],
+    "startDate": "2024-01-01",
+    "endDate": "2026-08-31",
+    "dateBasis": "Native observation timestamps, inclusive; timetable departures follow their separate August-only civil-date range. Reference snapshots use the latest available release regardless of reference year. Download, check and processing dates are provenance, not observations.",
+    "appliedAt": "2026-09-23",
+    "currentMapException": {
+      "scope": [
+        "station_catalogue",
+        "cartographic_locations",
+        "osm",
+        "bkg"
+      ],
+      "rule": "Use the latest available maps, station directory and static infrastructure inventories, even after the analysis cutoff. Preserve actual publication/capture dates; these snapshots do not reconstruct past conditions. Facility-status observations are not covered by this exception."
+    },
+    "timetable": {
+      "startDate": "2026-08-01",
+      "endDate": "2026-08-31",
+      "dateBasis": "Departure instants from 1 through 31 August 2026 in Europe/Berlin. Earlier GTFS service-day identifiers may be retained only as necessary calendar support for overnight departures inside August; they do not permit July departures or query windows.",
+      "timezone": "Europe/Berlin"
+    },
+    "latestReferenceSnapshots": {
+      "scope": [
+        "station_catalogue",
+        "cartographic_locations",
+        "stop_directory",
+        "osm",
+        "bkg",
+        "zensus",
+        "station_plans"
+      ],
+      "rule": "Use the latest available release of reference datasets. Preserve and display the actual reference, capture and publication dates, including dates before 2024 or after August 2026. A snapshot is not an observation time series and does not reconstruct historical conditions. Historical facility operating status and weather remain subject to the observation range; the separate liveFacilities rule governs explicitly requested current SIRI snapshots."
+    },
+    "operationalArchive": {
+      "startDate": "2026-08-01",
+      "endDate": "2026-08-31",
+      "timezone": "Europe/Berlin",
+      "dateBasis": "Eligible native arrival/departure records within August only; reported changed times are not verified actual event times."
+    }
+  },
+  "scope": "Historische Messungen vom 01.01.2024 bis 31.08.2026; aktueller SIRI-Anlagenstatus separat mit eigenem Zeitstempel. Fahrplan-Abfahrten ausschließlich vom 01.08.2026 bis 31.08.2026 einschließlich. Alle Referenzdaten, einschließlich Zensus und Haltestellenverzeichnis, verwenden die neueste zugängliche Ausgabe; Quellenstände und Zugangslücken sind separat ausgewiesen und nicht an den Beobachtungszeitraum gebunden. Fachlich relevante Produkte der aufgeführten Quellen; Zeiträume, räumliche Ausschnitte und Zugangslücken stehen je Quelle. Ein erfolgreicher Download bestätigt keine Vollständigkeit realer Stationsmerkmale.",
+  "totals": {
+    "archiveBytes": 8208747574,
+    "metadataBytes": 19526598,
+    "preparedBytes": 2550922314,
+    "fileCount": 11560,
+    "sourcesWithData": 12,
+    "sourceCount": 14
+  },
+  "sources": [
+    {
+      "sourceId": "openstation",
+      "freshness": {
+        "sourceId": "openstation",
+        "status": "verified_current_with_date_exclusions",
+        "statusLabel": "Inventar und separat datierter Anlagenstatus",
+        "checkedAt": "2026-09-25T09:47:05.659075+00:00",
+        "referenceLabel": "Stationsinventar 23.09.2026 · SIRI 25.09.2026",
+        "summary": "NeTEx-Inventar mit zusätzlichen Barrierefreiheitsangaben, Bahnsteigdetails, Hilfsangeboten und Zuständigkeiten. SIRI zeigt den zuletzt abgerufenen aktuellen Anlagenstatus separat vom historischen Analysedatum; Aktualisierung im lokalen Projekt vor einer neuen Veröffentlichung.",
+        "gaps": [
+          "Keine nativen historischen SIRI-/FaSta-Meldungen für 01.01.2024–31.08.2026 abgerufen. Aktuelle Meldungen rekonstruieren keine vergangenen Zustände. Fehlend oder unbekannt bedeutet weder funktionsfähig noch defekt."
+        ],
+        "evidenceUrl": "/data/freshness/openstation.json"
+      },
+      "name": "DB InfraGO · OpenStation",
+      "retrievedAt": "2026-09-25T09:47:05.659075+00:00",
+      "scope": "Vollständiges NeTEx-Inventar mit zusätzlich aufbereiteten Merkmalen; aktueller SIRI-Abrufsnapshot separat vom historischen Analysezeitraum.",
+      "status": "retrieved",
+      "archiveBytes": 18558276,
+      "metadataBytes": 0,
+      "fileCount": 2,
+      "dataFileCount": 2,
+      "preparedBytes": 435009836,
+      "preparedFileCount": 16188,
+      "integrationNote": "5.393 NeTEx-Profile mit ergänzenden Barrierefreiheitsangaben, Bahnsteigdetails, Hilfsangeboten und Organisationsbezügen aus dem vorhandenen Roharchiv. Aktueller SIRI-Anlagenstatus wird separat mit eigenem Zeitstempel ohne Live-Aktualisierung angezeigt; er verändert keine historischen Indikatoren. Kein nativer historischer Statusverlauf abgerufen.",
+      "datasets": [
+        {
+          "title": "OpenStation NeTEx – vollständiger aktueller Deutschland-Bulk",
+          "bytes": 18529972,
+          "fileCount": 1,
+          "referencePeriod": "2026-09-23T10:49:41.392Z",
+          "notes": "Vollständige Rohdatei. NeTEx-Profilimport wird separat versioniert; SIRI ist ein Abrufsnapshot, kein Live-Monitoring.",
+          "url": "https://bahnhof.de/daten/netex",
+          "records": {
+            "EquipmentPlace": 52545,
+            "Quay": 21787,
+            "StopPlace": 5393
+          }
+        },
+        {
+          "title": "OpenStation SIRI FM – separat datierter aktueller Anlagenstatus",
+          "bytes": 28304,
+          "fileCount": 1,
+          "referencePeriod": "2026-09-25T09:47:02Z",
+          "notes": "Aktueller Abrufsnapshot auf ausdrücklichen Wunsch separat erhalten. Kein Bestandteil der historischen Indikatoren. Aktualisierung im lokalen Projekt vor einer neuen Veröffentlichung; der hier gemessene Bestand gilt zum Prüfzeitpunkt.",
+          "url": "https://bahnhof.de/daten/siri-lite/fm.xml",
+          "records": {
+            "records": 3107,
+            "uniqueFacilityRefs": 3107,
+            "matchedRecords": 3107,
+            "unmatchedRecords": 0,
+            "ambiguousRecords": 0,
+            "stationsWithStatus": 1300,
+            "duplicateFacilityRefs": 0,
+            "statusCounts": {
+              "unknown": 132,
+              "available": 2812,
+              "notAvailable": 163
+            }
+          }
+        }
+      ],
+      "missing": [
+        "Kein nutzbarer SIRI-Statussnapshot für 2024-01-01 bis 2026-08-31. Der Snapshot vom 23.09.2026 wurde entfernt; keine historische Anlagenverfügbarkeit ableitbar.",
+        "Keine nativen historischen SIRI-/FaSta-Meldungen abgerufen. Die offizielle aktuelle Schnittstelle dokumentiert keinen historischen Abruf. Die getrennte WDR-Auswertung enthält veröffentlichte Aggregate für einen Teilzeitraum. Aktuelle Ausstattung und Karten rekonstruieren keine vergangenen Betriebszustände."
+      ],
+      "recordDefinition": null,
+      "inventoryUrl": "/data/retrieval/openstation.json"
+    },
+    {
+      "sourceId": "cartographic_locations",
+      "freshness": {
+        "sourceId": "cartographic_locations",
+        "status": "updated",
+        "statusLabel": "Aktualisiert",
+        "checkedAt": "2026-09-23T17:59:15.631162+00:00",
+        "referenceLabel": "OSM 23.09.2026 · Trainline 21.09.2026",
+        "summary": "Neueste veröffentlichte Stationspositionen über exakte Kennungen zugeordnet; alternative Quellpositionen bleiben dokumentiert.",
+        "gaps": [
+          "Lindaunis bleibt ohne sichere Kartenposition. Kartenpositionen ersetzen keine Analyseanker."
+        ],
+        "evidenceUrl": "/data/freshness/cartographic_locations.json"
+      },
+      "name": "Trainline EU & OSM · Kartenpositionen",
+      "retrievedAt": "2026-09-23T17:59:07.872738+00:00",
+      "scope": "Vollständige Trainline-CSV und deutschlandweiter OSM-Stationsauszug; exakte Kennungszuordnung für 5.392 von 5.393 DB-Stationen.",
+      "status": "retrieved",
+      "archiveBytes": 20513434,
+      "metadataBytes": 25317,
+      "fileCount": 3,
+      "dataFileCount": 2,
+      "preparedBytes": 5742012,
+      "preparedFileCount": 2,
+      "integrationNote": "Kartenpositionen für 5.392 Stationen; reine Kartendarstellung.",
+      "datasets": [
+        {
+          "title": "Trainline EU – vollständiger Stationskatalog",
+          "bytes": 16193891,
+          "fileCount": 1,
+          "referencePeriod": "2026-09-21T15:37:34Z",
+          "notes": null,
+          "url": "https://raw.githubusercontent.com/trainline-eu/stations/0899a18c965108f3e35c53024a630faccd8e413e/stations.csv",
+          "records": null
+        },
+        {
+          "title": "Trainline Lizenztext",
+          "bytes": 25317,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://raw.githubusercontent.com/trainline-eu/stations/0899a18c965108f3e35c53024a630faccd8e413e/LICENCE.txt",
+          "records": null
+        },
+        {
+          "title": "OSM – Deutschland, Stationen und Haltepunkte",
+          "bytes": 4294226,
+          "fileCount": 1,
+          "referencePeriod": "2026-09-23T17:56:39Z",
+          "notes": null,
+          "url": "https://overpass-api.de/api/interpreter",
+          "records": null
+        }
+      ],
+      "missing": [
+        "Lindaunis hat weiterhin keine exakte zugeordnete Kartenposition. Kartenpositionen dienen nicht als zusätzliche Analyseanker."
+      ],
+      "recordDefinition": null,
+      "inventoryUrl": "/data/retrieval/cartographic_locations.json"
+    },
+    {
+      "sourceId": "osm",
+      "freshness": {
+        "sourceId": "osm",
+        "status": "updated",
+        "statusLabel": "Aktualisiert",
+        "checkedAt": "2026-09-23T18:16:02.459572+00:00",
+        "referenceLabel": "Kartierungsstand 22.09.2026",
+        "summary": "Neuester verfügbarer Deutschlandauszug lokal an den aktuellen Analyseankern ausgewertet.",
+        "gaps": [
+          "Kartierungsstand ist kein Vor-Ort-Prüfdatum. Keine vollständige Historie aller Kartenänderungen seit 2024; Relationen bleiben ausgeschlossen."
+        ],
+        "evidenceUrl": "/data/freshness/osm.json"
+      },
+      "name": "OpenStreetMap · Deutschland",
+      "retrievedAt": "2026-09-23T18:16:02.459076+00:00",
+      "scope": "Vollständiger Deutschlandauszug mit dem aktuell angebotenen Geofabrik-Stand 22.09.2026 20:22:59 UTC; aus geprüftem Basis-PBF und offizieller täglicher Änderungsdatei lokal fortgeschrieben. Für alle 1.262 aktuell dokumentierten Analysepunkte aufbereitet.",
+      "status": "retrieved",
+      "archiveBytes": 4852770554,
+      "metadataBytes": 46457,
+      "fileCount": 6,
+      "dataFileCount": 2,
+      "preparedBytes": 1369041621,
+      "preparedFileCount": 3791,
+      "integrationNote": "Deutschland-PBF lokal ausgewertet: 1.262 verifizierte Analyseanker × 250/500/1.000 m. Kartierte Knoten und Wege mit Pufferkontakt; Relationen ausgeschlossen und dokumentiert. Ohne neuen Overpass-Abruf nutzbar.",
+      "datasets": [
+        {
+          "title": "OpenStreetMap Deutschland – offizieller Geofabrik-Updatepfad, lokal fortgeschriebener PBF-Auszug",
+          "bytes": 4845498064,
+          "fileCount": 1,
+          "referencePeriod": "2026-09-22T20:22:59Z",
+          "notes": "Vollständiger Deutschlandauszug aus unverändert geprüftem Geofabrik-PBF und der exakt anschließenden offiziellen Änderungsdatei. Lokale PBF-Kodierung; keine behauptete Binäridentität zum Tagesdownload. Ohne Benutzer-/Änderungssatzdaten.",
+          "url": "https://download.geofabrik.de/europe/germany-updates/000/004/916.osc.gz",
+          "records": null
+        },
+        {
+          "title": "Anbieter-Prüfsumme des verwendeten Basisextrakts vom 21.09.2026",
+          "bytes": 57,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": "Provenienznachweis des inzwischen ersetzten Basisextrakts, nicht Prüfsumme des lokal fortgeschriebenen Ergebnisses.",
+          "url": "https://download.geofabrik.de/europe/germany-260921.osm.pbf.md5",
+          "records": null
+        },
+        {
+          "title": "Auszugsgrenze Deutschland",
+          "bytes": 46174,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://download.geofabrik.de/europe/germany.poly",
+          "records": null
+        },
+        {
+          "title": "germany-4915.state.txt",
+          "bytes": 113,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://download.geofabrik.de/europe/germany-updates/000/004/915.state.txt",
+          "records": null
+        },
+        {
+          "title": "germany-4916.state.txt",
+          "bytes": 113,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://download.geofabrik.de/europe/germany-updates/000/004/916.state.txt",
+          "records": null
+        },
+        {
+          "title": "germany-4916.osc.gz",
+          "bytes": 7226033,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://download.geofabrik.de/europe/germany-updates/000/004/916.osc.gz",
+          "records": null
+        }
+      ],
+      "missing": [
+        "Ein aktueller Kartenstand, keine vollständige Änderungshistorie seit Januar 2024.",
+        "Auswertung für 1.262 Stationen mit dokumentiertem Analysepunkt; für die übrigen 4.131 Katalogstationen ist keine räumliche Stationsauswertung möglich.",
+        "3.943 Relationen mit komplexer Geometrie sind ausgeschlossen. Direkte ausgewählte Mitglieder werden gekennzeichnet; quellenübergreifende Dubletten und physische Vollständigkeit sind nicht gesichert.",
+        "Ein 500-m- und zwei 1.000-m-Puffer überschneiden die Grenze des Deutschlandauszugs; diese Ausschnitte sind als teilweise abgedeckt gekennzeichnet.",
+        "4.131 Stationen ohne verifizierten Analyseanker erhalten keine Pufferberechnung. OSM-Relationen nicht normalisiert; Kartierungs- und Extraktgrenzen sind in jedem Snapshot dokumentiert."
+      ],
+      "recordDefinition": null,
+      "inventoryUrl": "/data/retrieval/osm.json"
+    },
+    {
+      "sourceId": "bkg",
+      "freshness": {
+        "sourceId": "bkg",
+        "status": "current",
+        "statusLabel": "Neueste verfügbare Ausgabe",
+        "checkedAt": "2026-09-23T20:47:43.662864+00:00",
+        "referenceLabel": "Gebietsstand 31.12.2025",
+        "summary": "Alle fünf aktuellen VG1000-Layer erneut abgerufen und inhaltlich mit dem lokalen Bestand verglichen. Der jüngste im offiziellen Downloadkatalog angebotene Jahresstand ist 31.12.2025.",
+        "gaps": [
+          "Jahresstand 31.12.2025 ist die jüngste veröffentlichte Ausgabe; kein laufend gemessener Grenzverlauf."
+        ],
+        "evidenceUrl": "/data/freshness/bkg.json"
+      },
+      "name": "BKG · VG1000",
+      "retrievedAt": "2026-09-23T20:47:43.633076+00:00",
+      "scope": "Alle fünf im WFS angebotenen VG1000-Layer für Deutschland (Stand 31.12.2025).",
+      "status": "retrieved",
+      "archiveBytes": 9927485,
+      "metadataBytes": 0,
+      "fileCount": 5,
+      "dataFileCount": 5,
+      "preparedBytes": 11066260,
+      "preparedFileCount": 7,
+      "integrationNote": "Alle fünf vollständigen Layer abrufbar; Staats-, Landes-, Regierungsbezirks- und Kreisflächen am Analyseanker zugeordnet. Linienlayer separat. Generalisierter Kartenmaßstab 1:1.000.000.",
+      "datasets": [
+        {
+          "title": "BKG VG1000 – Staatsgebiet",
+          "bytes": 810322,
+          "fileCount": 1,
+          "referencePeriod": "2025-12-31",
+          "notes": "Kompletter veröffentlichter Layer ohne GF-Filter; EPSG:4326.",
+          "url": "https://sgx.geodatenzentrum.de/wfs_vg1000?service=WFS&version=2.0.0&request=GetFeature&typeNames=vg1000:vg1000_sta&outputFormat=application%2Fjson&srsName=EPSG:4326",
+          "records": 10
+        },
+        {
+          "title": "BKG VG1000 – Bundesländer",
+          "bytes": 1466851,
+          "fileCount": 1,
+          "referencePeriod": "2025-12-31",
+          "notes": "Kompletter veröffentlichter Layer ohne GF-Filter; EPSG:4326.",
+          "url": "https://sgx.geodatenzentrum.de/wfs_vg1000?service=WFS&version=2.0.0&request=GetFeature&typeNames=vg1000:vg1000_lan&outputFormat=application%2Fjson&srsName=EPSG:4326",
+          "records": 33
+        },
+        {
+          "title": "BKG VG1000 – Regierungsbezirke",
+          "bytes": 682748,
+          "fileCount": 1,
+          "referencePeriod": "2025-12-31",
+          "notes": "Kompletter veröffentlichter Layer ohne GF-Filter; EPSG:4326.",
+          "url": "https://sgx.geodatenzentrum.de/wfs_vg1000?service=WFS&version=2.0.0&request=GetFeature&typeNames=vg1000:vg1000_rbz&outputFormat=application%2Fjson&srsName=EPSG:4326",
+          "records": 19
+        },
+        {
+          "title": "BKG VG1000 – Kreise",
+          "bytes": 4215799,
+          "fileCount": 1,
+          "referencePeriod": "2025-12-31",
+          "notes": "Kompletter veröffentlichter Layer ohne GF-Filter; EPSG:4326.",
+          "url": "https://sgx.geodatenzentrum.de/wfs_vg1000?service=WFS&version=2.0.0&request=GetFeature&typeNames=vg1000:vg1000_krs&outputFormat=application%2Fjson&srsName=EPSG:4326",
+          "records": 425
+        },
+        {
+          "title": "BKG VG1000 – Verwaltungsgrenzen",
+          "bytes": 2751765,
+          "fileCount": 1,
+          "referencePeriod": "2025-12-31",
+          "notes": "Kompletter veröffentlichter Layer ohne GF-Filter; EPSG:4326.",
+          "url": "https://sgx.geodatenzentrum.de/wfs_vg1000?service=WFS&version=2.0.0&request=GetFeature&typeNames=vg1000:vg1000_li&outputFormat=application%2Fjson&srsName=EPSG:4326",
+          "records": 1608
+        }
+      ],
+      "missing": [
+        "Generalisierte Grenzen im Maßstab 1:1.000.000; keine Grundstücks- oder Stationsgrenzen."
+      ],
+      "recordDefinition": null,
+      "inventoryUrl": "/data/retrieval/bkg.json"
+    },
+    {
+      "sourceId": "delfi",
+      "freshness": {
+        "sourceId": "delfi",
+        "status": "partial",
+        "statusLabel": "Zeitlich begrenzter Teilbestand",
+        "checkedAt": "2026-09-23T20:59:51.117115+00:00",
+        "referenceLabel": "Fahrplan 01.08.2026–31.08.2026 · Export 08.08.2026 · ZHV 29.12.2025",
+        "summary": "Geplante deutschlandweite Abfahrten 01.08.2026–31.08.2026, aus DELFI-Export 08.08.2026 (öffentlicher ÖPNV-Atlas-Spiegel). Notwendige Vor-Fahrplantage nur für Abfahrten innerhalb August. ZHV: jüngster anonym zugänglicher offizieller Archivstand 2025-12-29; aktuelle geschützte Ausgabe nicht verfügbar.",
+        "gaps": [
+          "Die aktuelle offizielle ZHV-Ausgabe sowie geschützte DELFI-Fahrplanstände erfordern Registrierung; kein Konto verwendet oder angelegt.",
+          "Der Auguststand stammt aus einem öffentlichen Gemeinschaftsspiegel. Identität mit einer authentifizierten DELFI-Portaldatei ist nicht unabhängig bestätigt; Export 08.08.2026 beweist keine Berücksichtigung späterer August-Korrekturen.",
+          "Kein passendes August-NeTEx-Fahrplanarchiv öffentlich gefunden; September- und 2024/2025-Fahrpläne würden die gewünschte August-Abdeckung nicht vervollständigen.",
+          "Die aktuelle offizielle ZHV-Ausgabe erfordert Registrierung. Verwendet wird der erneut als jüngster anonym zugänglicher offizieller Archivstand geprüfte 2025-12-29.",
+          "60 Stationszuordnungen fehlen; Kalenderabdeckung ist keine Garantie für vollständige Verkehrsunternehmen, tatsächlich gefahrene Züge oder fehlerfreie Quelldaten."
+        ],
+        "evidenceUrl": "/data/freshness/delfi.json"
+      },
+      "name": "DELFI · Fahrplan & Haltestellen",
+      "retrievedAt": "2026-09-23T20:48:09.859819+00:00",
+      "scope": "Geplante deutschlandweite Abfahrten 01.08.2026–31.08.2026, aus DELFI-Export 08.08.2026 (öffentlicher ÖPNV-Atlas-Spiegel). Notwendige Vor-Fahrplantage nur für Abfahrten innerhalb August. ZHV: jüngster anonym zugänglicher offizieller Archivstand 2025-12-29; aktuelle geschützte Ausgabe nicht verfügbar.",
+      "status": "partial",
+      "archiveBytes": 451190542,
+      "metadataBytes": 0,
+      "fileCount": 3,
+      "dataFileCount": 3,
+      "preparedBytes": 463469019,
+      "preparedFileCount": 5398,
+      "integrationNote": "5.333 Stationen über publizierte Kennungen zugeordnet, 60 ohne sichere Zuordnung. 39.208.525 stop_times des gekürzten Archivs verarbeitet, 2.695.335 Ereignisvorlagen. Ausgewählte Abfahrtsdaten 2026-08-01 bis 2026-08-31. Notwendige frühere Verkehrstagskennungen für Nachtfahrten im August sind Kalenderbezüge, keine Juli-Abfahrten. Spätere GTFS-/NeTEx-Archive entfernt.",
+      "datasets": [
+        {
+          "title": "DELFI GTFS - August departures with overnight boundary support",
+          "bytes": 388433590,
+          "fileCount": 1,
+          "referencePeriod": "Abfahrten 01.08.2026 bis 31.08.2026; Export 2026-08-08; notwendige Vor-Fahrplantage nur als Kalenderreferenz.",
+          "notes": [
+            "Public community mirror attributed to DELFI; no authenticated official portal download.",
+            "Only civil-date departures in August are available. Prior service identifiers support overnight departures inside August; no July query is available.",
+            "Original source hash and full verification preserved; later August corrections are not independently established."
+          ],
+          "url": "https://netzkarten.byepast.de/gtfs/2026-08.zip",
+          "records": {
+            "stop_times": 39208525,
+            "calendar": 0,
+            "calendar_dates": 235972,
+            "trips": 1929427,
+            "frequencies": 21,
+            "transfers": 1047785,
+            "agency": 1179,
+            "levels": 11,
+            "pathways": 332316,
+            "routes": 29330,
+            "shapes": 10329234,
+            "stops": 546163
+          }
+        },
+        {
+          "title": "DELFI ZHV – vollständiges CSV-Archiv vom 29.12.2025",
+          "bytes": 22996267,
+          "fileCount": 1,
+          "referencePeriod": "Verzeichnisstand 2025-12-29; neuester anonym zugänglicher offizieller Archivstand. Aktuelle geschützte Ausgabe nicht abgerufen.",
+          "notes": [
+            "Neuester Stand aus erneuter Entdeckung der öffentlichen Archivverzeichnisse; keine Annahme aufgrund einer fest eingetragenen Datei.",
+            "Aktuelle Ausgabe im DELFI-Portal und ZHV-Fachportal erfordert Registrierung; Datum des aktuellen geschützten Exports unbekannt.",
+            "CSV und XML stellen denselben Verzeichnisstand dar; keine zusätzlichen eindeutigen Haltestellen."
+          ],
+          "url": "https://archiv.opendata-oepnv.de/DELFI/ZHV/2025/20251229_zHV_gesamt.zip",
+          "records": {
+            "zHV_aktuell_csv.2025-12-29.csv": 939445
+          }
+        },
+        {
+          "title": "DELFI ZHV – vollständiges XML-Archiv vom 29.12.2025",
+          "bytes": 39760685,
+          "fileCount": 1,
+          "referencePeriod": "Verzeichnisstand 2025-12-29; neuester anonym zugänglicher offizieller Archivstand. Aktuelle geschützte Ausgabe nicht abgerufen.",
+          "notes": [
+            "Neuester Stand aus erneuter Entdeckung der öffentlichen Archivverzeichnisse; keine Annahme aufgrund einer fest eingetragenen Datei.",
+            "Aktuelle Ausgabe im DELFI-Portal und ZHV-Fachportal erfordert Registrierung; Datum des aktuellen geschützten Exports unbekannt.",
+            "CSV und XML stellen denselben Verzeichnisstand dar; keine zusätzlichen eindeutigen Haltestellen."
+          ],
+          "url": "https://archiv.opendata-oepnv.de/DELFI/ZHV/2025/20251229_zHV_gesamt_xml.zip",
+          "records": null
+        }
+      ],
+      "missing": [
+        "Der Auguststand stammt aus einem öffentlichen Gemeinschaftsspiegel. Identität mit einer authentifizierten DELFI-Portaldatei ist nicht unabhängig bestätigt; Export 08.08.2026 beweist keine Berücksichtigung späterer August-Korrekturen.",
+        "Kein passendes August-NeTEx-Fahrplanarchiv öffentlich gefunden; September- und 2024/2025-Fahrpläne würden die gewünschte August-Abdeckung nicht vervollständigen.",
+        "Die aktuelle offizielle ZHV-Ausgabe erfordert Registrierung. Verwendet wird der erneut als jüngster anonym zugänglicher offizieller Archivstand geprüfte 2025-12-29.",
+        "60 Stationszuordnungen fehlen; Kalenderabdeckung ist keine Garantie für vollständige Verkehrsunternehmen, tatsächlich gefahrene Züge oder fehlerfreie Quelldaten.",
+        "Ausgewertet werden ausschließlich Abfahrten vom 01.–31.08.2026. Notwendige frühere Verkehrstage dienen der Zuordnung von Nachtfahrten im August. Ungeklärte Stationskennungen bleiben ohne Kennzahl. Keine Echtzeitdaten und kein zusätzlicher NeTEx-Fahrplanimport."
+      ],
+      "recordDefinition": "GTFS zählt wiederverwendbare relative Vorlagen und explizite Kalenderreferenzen. Abfahrten werden ausschließlich innerhalb der August-Ziviltage ausgewertet; Vor-Fahrplantage sind keine Juli-Abfahrtsbeobachtungen. ZHV CSV/XML sind zwei Darstellungen desselben Verzeichnisses.",
+      "inventoryUrl": "/data/retrieval/delfi.json"
+    },
+    {
+      "sourceId": "dwd",
+      "freshness": {
+        "sourceId": "dwd",
+        "status": "current_for_retained_period",
+        "statusLabel": "Auf Analysezeitraum begrenzt",
+        "checkedAt": "2026-09-23T20:44:49.135401+00:00",
+        "referenceLabel": "Messungen bis 31.08.2026",
+        "summary": "Alle 15 stündlichen Produktgruppen auf 01.01.2024–31.08.2026 begrenzt. Spätere Meldungen aus den Archiven entfernt. Stationsbezogene Messlücken bleiben sichtbar.",
+        "gaps": [
+          "Zwischen verfügbaren Archiv-Zeitspannen bestehen 2 produkt- und stationsbezogene Lücken; genaue Zeiträume im Prüfnachweis.",
+          "Kein lückenloser Stundenbestand für jeden Messort. Produktweite Anfangs- und Enddaten bedeuten keine vollständige lokale Abdeckung."
+        ],
+        "evidenceUrl": "/data/freshness/dwd.json"
+      },
+      "name": "DWD · Wetterbeobachtungen",
+      "retrievedAt": "2026-09-23T20:44:49.135401+00:00",
+      "scope": "DWD-Stundenmesswerte aus 15 Produktfamilien: Messdaten ab 01.01.2024 bis zum jeweils neuesten veröffentlichten Stand innerhalb des gewählten Zeitraums. Alle zugehörigen aktuellen und historischen Verzeichnisse wurden auf Änderungen geprüft; Quellenverzögerungen und Abdeckung sind getrennt ausgewiesen.",
+      "status": "retrieved",
+      "archiveBytes": 1039640634,
+      "metadataBytes": 19305917,
+      "fileCount": 11376,
+      "dataFileCount": 11272,
+      "preparedBytes": 78993501,
+      "preparedFileCount": 66,
+      "integrationNote": "Stündliche Meldungen vom 01.01.2024 bis 31.08.2026 in 15 Produktfamilien lokal abfragbar. Gemischte Archive wurden nach Quellzeitstempel gekürzt; Original- und lokale Prüfsummen bleiben getrennt. Datierte Messstation bis 50 km je Produkt; regionale Werte, keine Bahnhofsmessung.",
+      "datasets": [
+        {
+          "id": "air_temperature",
+          "title": "Lufttemperatur und relative Feuchte",
+          "files": 508,
+          "bytes": 39181769,
+          "observationArchives": 503,
+          "records": 6237885,
+          "observationBytes": 38534698,
+          "metadataBytes": 647071,
+          "fileCount": 508,
+          "notes": "Native Messdaten ab 01.01.2024; Quellenstände geprüft und aktualisiert. Jüngste Meldungen können vorläufig sein; Stations- und Produktabdeckung unterscheiden sich.",
+          "firstDate": "20240102",
+          "lastDate": "20260831",
+          "referencePeriod": "2024-01-02 bis 2026-08-31"
+        },
+        {
+          "id": "air_temperature_historical",
+          "title": "Lufttemperatur und relative Feuchte · qualitätsgeprüfte historische Daten",
+          "files": 504,
+          "bytes": 52813986,
+          "observationArchives": 502,
+          "records": 8646551,
+          "observationBytes": 52203912,
+          "metadataBytes": 610074,
+          "fileCount": 504,
+          "notes": "Native Messdaten ab 01.01.2024; Quellenstände geprüft und aktualisiert. Jüngste Meldungen können vorläufig sein; Stations- und Produktabdeckung unterscheiden sich.",
+          "firstDate": "20240101",
+          "lastDate": "20251231",
+          "referencePeriod": "2024-01-01 bis 2025-12-31"
+        },
+        {
+          "id": "cloud_type",
+          "title": "Wolkenarten",
+          "files": 210,
+          "bytes": 47179910,
+          "observationArchives": 205,
+          "records": 2431903,
+          "observationBytes": 45245085,
+          "metadataBytes": 1934825,
+          "fileCount": 210,
+          "notes": "Native Messdaten ab 01.01.2024; Quellenstände geprüft und aktualisiert. Jüngste Meldungen können vorläufig sein; Stations- und Produktabdeckung unterscheiden sich.",
+          "firstDate": "20240909",
+          "lastDate": "20260831",
+          "referencePeriod": "2024-09-09 bis 2026-08-31"
+        },
+        {
+          "id": "cloud_type_historical",
+          "title": "Wolkenarten · qualitätsgeprüfte historische Daten",
+          "files": 205,
+          "bytes": 46993844,
+          "observationArchives": 203,
+          "records": 3375679,
+          "observationBytes": 45064686,
+          "metadataBytes": 1929158,
+          "fileCount": 205,
+          "notes": "Native Messdaten ab 01.01.2024; Quellenstände geprüft und aktualisiert. Jüngste Meldungen können vorläufig sein; Stations- und Produktabdeckung unterscheiden sich.",
+          "firstDate": "20240101",
+          "lastDate": "20251231",
+          "referencePeriod": "2024-01-01 bis 2025-12-31"
+        },
+        {
+          "id": "cloudiness",
+          "title": "Bewölkung",
+          "files": 210,
+          "bytes": 9302775,
+          "observationArchives": 205,
+          "records": 2431830,
+          "observationBytes": 9001918,
+          "metadataBytes": 300857,
+          "fileCount": 210,
+          "notes": "Native Messdaten ab 01.01.2024; Quellenstände geprüft und aktualisiert. Jüngste Meldungen können vorläufig sein; Stations- und Produktabdeckung unterscheiden sich.",
+          "firstDate": "20240101",
+          "lastDate": "20260831",
+          "referencePeriod": "2024-01-01 bis 2026-08-31"
+        },
+        {
+          "id": "cloudiness_historical",
+          "title": "Bewölkung · qualitätsgeprüfte historische Daten",
+          "files": 205,
+          "bytes": 12495654,
+          "observationArchives": 203,
+          "records": 3375491,
+          "observationBytes": 12197501,
+          "metadataBytes": 298153,
+          "fileCount": 205,
+          "notes": "Native Messdaten ab 01.01.2024; Quellenstände geprüft und aktualisiert. Jüngste Meldungen können vorläufig sein; Stations- und Produktabdeckung unterscheiden sich.",
+          "firstDate": "20240101",
+          "lastDate": "20251231",
+          "referencePeriod": "2024-01-01 bis 2025-12-31"
+        },
+        {
+          "id": "dew_point",
+          "title": "Taupunkt",
+          "files": 602,
+          "bytes": 47876865,
+          "observationArchives": 597,
+          "records": 7333166,
+          "observationBytes": 47000950,
+          "metadataBytes": 875915,
+          "fileCount": 602,
+          "notes": "Native Messdaten ab 01.01.2024; Quellenstände geprüft und aktualisiert. Jüngste Meldungen können vorläufig sein; Stations- und Produktabdeckung unterscheiden sich.",
+          "firstDate": "20240102",
+          "lastDate": "20260831",
+          "referencePeriod": "2024-01-02 bis 2026-08-31"
+        },
+        {
+          "id": "dew_point_historical",
+          "title": "Taupunkt · qualitätsgeprüfte historische Daten",
+          "files": 596,
+          "bytes": 64174446,
+          "observationArchives": 594,
+          "records": 10024634,
+          "observationBytes": 63334314,
+          "metadataBytes": 840132,
+          "fileCount": 596,
+          "notes": "Native Messdaten ab 01.01.2024; Quellenstände geprüft und aktualisiert. Jüngste Meldungen können vorläufig sein; Stations- und Produktabdeckung unterscheiden sich.",
+          "firstDate": "20240101",
+          "lastDate": "20251231",
+          "referencePeriod": "2024-01-01 bis 2025-12-31"
+        },
+        {
+          "id": "extreme_wind",
+          "title": "Windspitzen",
+          "files": 356,
+          "bytes": 20129420,
+          "observationArchives": 351,
+          "records": 4309698,
+          "observationBytes": 19537348,
+          "metadataBytes": 592072,
+          "fileCount": 356,
+          "notes": "Native Messdaten ab 01.01.2024; Quellenstände geprüft und aktualisiert. Jüngste Meldungen können vorläufig sein; Stations- und Produktabdeckung unterscheiden sich.",
+          "firstDate": "20250321",
+          "lastDate": "20260831",
+          "referencePeriod": "2025-03-21 bis 2026-08-31"
+        },
+        {
+          "id": "extreme_wind_historical",
+          "title": "Windspitzen · qualitätsgeprüfte historische Daten",
+          "files": 352,
+          "bytes": 26790317,
+          "observationArchives": 350,
+          "records": 5859592,
+          "observationBytes": 26243801,
+          "metadataBytes": 546516,
+          "fileCount": 352,
+          "notes": "Native Messdaten ab 01.01.2024; Quellenstände geprüft und aktualisiert. Jüngste Meldungen können vorläufig sein; Stations- und Produktabdeckung unterscheiden sich.",
+          "firstDate": "20240101",
+          "lastDate": "20251231",
+          "referencePeriod": "2024-01-01 bis 2025-12-31"
+        },
+        {
+          "id": "licence",
+          "title": "DWD-Nutzungsbedingungen",
+          "files": 1,
+          "bytes": 62317,
+          "observationArchives": 0,
+          "records": 0,
+          "observationBytes": 0,
+          "metadataBytes": 62317,
+          "fileCount": 1,
+          "notes": "Native Messdaten ab 01.01.2024; Quellenstände geprüft und aktualisiert. Jüngste Meldungen können vorläufig sein; Stations- und Produktabdeckung unterscheiden sich."
+        },
+        {
+          "id": "moisture",
+          "title": "Feuchte",
+          "files": 602,
+          "bytes": 102812368,
+          "observationArchives": 597,
+          "records": 7194655,
+          "observationBytes": 101936067,
+          "metadataBytes": 876301,
+          "fileCount": 602,
+          "notes": "Native Messdaten ab 01.01.2024; Quellenstände geprüft und aktualisiert. Jüngste Meldungen können vorläufig sein; Stations- und Produktabdeckung unterscheiden sich.",
+          "firstDate": "20240102",
+          "lastDate": "20260831",
+          "referencePeriod": "2024-01-02 bis 2026-08-31"
+        },
+        {
+          "id": "moisture_historical",
+          "title": "Feuchte · qualitätsgeprüfte historische Daten",
+          "files": 596,
+          "bytes": 136307911,
+          "observationArchives": 594,
+          "records": 9777995,
+          "observationBytes": 135465933,
+          "metadataBytes": 841978,
+          "fileCount": 596,
+          "notes": "Native Messdaten ab 01.01.2024; Quellenstände geprüft und aktualisiert. Jüngste Meldungen können vorläufig sein; Stations- und Produktabdeckung unterscheiden sich.",
+          "firstDate": "20240101",
+          "lastDate": "20251231",
+          "referencePeriod": "2024-01-01 bis 2025-12-31"
+        },
+        {
+          "id": "precipitation",
+          "title": "Niederschlag",
+          "files": 1400,
+          "bytes": 56961557,
+          "observationArchives": 1395,
+          "records": 17288845,
+          "observationBytes": 54967756,
+          "metadataBytes": 1993801,
+          "fileCount": 1400,
+          "notes": "Native Messdaten ab 01.01.2024; Quellenstände geprüft und aktualisiert. Jüngste Meldungen können vorläufig sein; Stations- und Produktabdeckung unterscheiden sich.",
+          "firstDate": "20240101",
+          "lastDate": "20260831",
+          "referencePeriod": "2024-01-01 bis 2026-08-31"
+        },
+        {
+          "id": "precipitation_historical",
+          "title": "Niederschlag · qualitätsgeprüfte historische Daten",
+          "files": 1391,
+          "bytes": 77336802,
+          "observationArchives": 1389,
+          "records": 23790039,
+          "observationBytes": 75366592,
+          "metadataBytes": 1970210,
+          "fileCount": 1391,
+          "notes": "Native Messdaten ab 01.01.2024; Quellenstände geprüft und aktualisiert. Jüngste Meldungen können vorläufig sein; Stations- und Produktabdeckung unterscheiden sich.",
+          "firstDate": "20240101",
+          "lastDate": "20251231",
+          "referencePeriod": "2024-01-01 bis 2025-12-31"
+        },
+        {
+          "id": "pressure",
+          "title": "Luftdruck",
+          "files": 219,
+          "bytes": 17293678,
+          "observationArchives": 214,
+          "records": 2687980,
+          "observationBytes": 16979189,
+          "metadataBytes": 314489,
+          "fileCount": 219,
+          "notes": "Native Messdaten ab 01.01.2024; Quellenstände geprüft und aktualisiert. Jüngste Meldungen können vorläufig sein; Stations- und Produktabdeckung unterscheiden sich.",
+          "firstDate": "20250321",
+          "lastDate": "20260831",
+          "referencePeriod": "2025-03-21 bis 2026-08-31"
+        },
+        {
+          "id": "pressure_historical",
+          "title": "Luftdruck · qualitätsgeprüfte historische Daten",
+          "files": 215,
+          "bytes": 23726473,
+          "observationArchives": 213,
+          "records": 3701927,
+          "observationBytes": 23458539,
+          "metadataBytes": 267934,
+          "fileCount": 215,
+          "notes": "Native Messdaten ab 01.01.2024; Quellenstände geprüft und aktualisiert. Jüngste Meldungen können vorläufig sein; Stations- und Produktabdeckung unterscheiden sich.",
+          "firstDate": "20240101",
+          "lastDate": "20251231",
+          "referencePeriod": "2024-01-01 bis 2025-12-31"
+        },
+        {
+          "id": "soil_temperature",
+          "title": "Bodentemperatur",
+          "files": 325,
+          "bytes": 34468465,
+          "observationArchives": 320,
+          "records": 3712137,
+          "observationBytes": 34035009,
+          "metadataBytes": 433456,
+          "fileCount": 325,
+          "notes": "Native Messdaten ab 01.01.2024; Quellenstände geprüft und aktualisiert. Jüngste Meldungen können vorläufig sein; Stations- und Produktabdeckung unterscheiden sich.",
+          "firstDate": "20250321",
+          "lastDate": "20260831",
+          "referencePeriod": "2025-03-21 bis 2026-08-31"
+        },
+        {
+          "id": "soil_temperature_historical",
+          "title": "Bodentemperatur · qualitätsgeprüfte historische Daten",
+          "files": 321,
+          "bytes": 45007941,
+          "observationArchives": 319,
+          "records": 5148005,
+          "observationBytes": 44610019,
+          "metadataBytes": 397922,
+          "fileCount": 321,
+          "notes": "Native Messdaten ab 01.01.2024; Quellenstände geprüft und aktualisiert. Jüngste Meldungen können vorläufig sein; Stations- und Produktabdeckung unterscheiden sich.",
+          "firstDate": "20240101",
+          "lastDate": "20251231",
+          "referencePeriod": "2024-01-01 bis 2025-12-31"
+        },
+        {
+          "id": "solar",
+          "title": "Solarstrahlung",
+          "files": 45,
+          "bytes": 12357012,
+          "observationArchives": 41,
+          "records": 940047,
+          "observationBytes": 12241431,
+          "metadataBytes": 115581,
+          "fileCount": 45,
+          "notes": "Native Messdaten ab 01.01.2024; Quellenstände geprüft und aktualisiert. Jüngste Meldungen können vorläufig sein; Stations- und Produktabdeckung unterscheiden sich.",
+          "firstDate": "20240101",
+          "lastDate": "20260831",
+          "referencePeriod": "2024-01-01 bis 2026-08-31"
+        },
+        {
+          "id": "sun",
+          "title": "Sonnenscheindauer",
+          "files": 202,
+          "bytes": 3740728,
+          "observationArchives": 197,
+          "records": 845983,
+          "observationBytes": 3447657,
+          "metadataBytes": 293071,
+          "fileCount": 202,
+          "notes": "Native Messdaten ab 01.01.2024; Quellenstände geprüft und aktualisiert. Jüngste Meldungen können vorläufig sein; Stations- und Produktabdeckung unterscheiden sich.",
+          "firstDate": "20240103",
+          "lastDate": "20260831",
+          "referencePeriod": "2024-01-03 bis 2026-08-31"
+        },
+        {
+          "id": "sun_historical",
+          "title": "Sonnenscheindauer · qualitätsgeprüfte historische Daten",
+          "files": 199,
+          "bytes": 7027714,
+          "observationArchives": 197,
+          "records": 1757338,
+          "observationBytes": 6730444,
+          "metadataBytes": 297270,
+          "fileCount": 199,
+          "notes": "Native Messdaten ab 01.01.2024; Quellenstände geprüft und aktualisiert. Jüngste Meldungen können vorläufig sein; Stations- und Produktabdeckung unterscheiden sich.",
+          "firstDate": "20240101",
+          "lastDate": "20251231",
+          "referencePeriod": "2024-01-01 bis 2025-12-31"
+        },
+        {
+          "id": "visibility",
+          "title": "Sichtweite",
+          "files": 209,
+          "bytes": 14083387,
+          "observationArchives": 204,
+          "records": 2484058,
+          "observationBytes": 13783350,
+          "metadataBytes": 300037,
+          "fileCount": 209,
+          "notes": "Native Messdaten ab 01.01.2024; Quellenstände geprüft und aktualisiert. Jüngste Meldungen können vorläufig sein; Stations- und Produktabdeckung unterscheiden sich.",
+          "firstDate": "20250321",
+          "lastDate": "20260831",
+          "referencePeriod": "2025-03-21 bis 2026-08-31"
+        },
+        {
+          "id": "visibility_historical",
+          "title": "Sichtweite · qualitätsgeprüfte historische Daten",
+          "files": 205,
+          "bytes": 19182546,
+          "observationArchives": 203,
+          "records": 3433618,
+          "observationBytes": 18884488,
+          "metadataBytes": 298058,
+          "fileCount": 205,
+          "notes": "Native Messdaten ab 01.01.2024; Quellenstände geprüft und aktualisiert. Jüngste Meldungen können vorläufig sein; Stations- und Produktabdeckung unterscheiden sich.",
+          "firstDate": "20240101",
+          "lastDate": "20251231",
+          "referencePeriod": "2024-01-01 bis 2025-12-31"
+        },
+        {
+          "id": "weather_phenomena",
+          "title": "Wettererscheinungen",
+          "files": 208,
+          "bytes": 9407353,
+          "observationArchives": 202,
+          "records": 2408618,
+          "observationBytes": 9066507,
+          "metadataBytes": 340846,
+          "fileCount": 208,
+          "notes": "Native Messdaten ab 01.01.2024; Quellenstände geprüft und aktualisiert. Jüngste Meldungen können vorläufig sein; Stations- und Produktabdeckung unterscheiden sich.",
+          "firstDate": "20250321",
+          "lastDate": "20260831",
+          "referencePeriod": "2025-03-21 bis 2026-08-31"
+        },
+        {
+          "id": "weather_phenomena_historical",
+          "title": "Wettererscheinungen · qualitätsgeprüfte historische Daten",
+          "files": 203,
+          "bytes": 13170467,
+          "observationArchives": 201,
+          "records": 3331150,
+          "observationBytes": 12920107,
+          "metadataBytes": 250360,
+          "fileCount": 203,
+          "notes": "Native Messdaten ab 01.01.2024; Quellenstände geprüft und aktualisiert. Jüngste Meldungen können vorläufig sein; Stations- und Produktabdeckung unterscheiden sich.",
+          "firstDate": "20240101",
+          "lastDate": "20251231",
+          "referencePeriod": "2024-01-01 bis 2025-12-31"
+        },
+        {
+          "id": "wind",
+          "title": "Wind",
+          "files": 301,
+          "bytes": 20215395,
+          "observationArchives": 296,
+          "records": 3687234,
+          "observationBytes": 19806976,
+          "metadataBytes": 408419,
+          "fileCount": 301,
+          "notes": "Native Messdaten ab 01.01.2024; Quellenstände geprüft und aktualisiert. Jüngste Meldungen können vorläufig sein; Stations- und Produktabdeckung unterscheiden sich.",
+          "firstDate": "20250321",
+          "lastDate": "20260831",
+          "referencePeriod": "2025-03-21 bis 2026-08-31"
+        },
+        {
+          "id": "wind_historical",
+          "title": "Wind · qualitätsgeprüfte historische Daten",
+          "files": 297,
+          "bytes": 27295375,
+          "observationArchives": 295,
+          "records": 5072533,
+          "observationBytes": 26923445,
+          "metadataBytes": 371930,
+          "fileCount": 297,
+          "notes": "Native Messdaten ab 01.01.2024; Quellenstände geprüft und aktualisiert. Jüngste Meldungen können vorläufig sein; Stations- und Produktabdeckung unterscheiden sich.",
+          "firstDate": "20240101",
+          "lastDate": "20251231",
+          "referencePeriod": "2024-01-01 bis 2025-12-31"
+        },
+        {
+          "id": "wind_synop",
+          "title": "Synoptischer Wind",
+          "files": 348,
+          "bytes": 22266283,
+          "observationArchives": 343,
+          "records": 4295616,
+          "observationBytes": 21794001,
+          "metadataBytes": 472282,
+          "fileCount": 348,
+          "notes": "Native Messdaten ab 01.01.2024; Quellenstände geprüft und aktualisiert. Jüngste Meldungen können vorläufig sein; Stations- und Produktabdeckung unterscheiden sich.",
+          "firstDate": "20240101",
+          "lastDate": "20260831",
+          "referencePeriod": "2024-01-01 bis 2026-08-31"
+        },
+        {
+          "id": "wind_synop_historical",
+          "title": "Synoptischer Wind · qualitätsgeprüfte historische Daten",
+          "files": 341,
+          "bytes": 29977876,
+          "observationArchives": 339,
+          "records": 5863857,
+          "observationBytes": 29552994,
+          "metadataBytes": 424882,
+          "fileCount": 341,
+          "notes": "Native Messdaten ab 01.01.2024; Quellenstände geprüft und aktualisiert. Jüngste Meldungen können vorläufig sein; Stations- und Produktabdeckung unterscheiden sich.",
+          "firstDate": "20240101",
+          "lastDate": "20251231",
+          "referencePeriod": "2024-01-01 bis 2025-12-31"
+        }
+      ],
+      "missing": [
+        "Beobachtungsdaten außerhalb des gewählten Zeitraums wurden auf Wunsch entfernt. Abrufdaten und originale Dateinamen sind Quellenmetadaten, keine zusätzlich aufbewahrten Messungen.",
+        "Andere Zeitauflösungen, Radar-, Vorhersage- und Klimaszenarioprodukte sind nicht Teil dieser Sammlung.",
+        "Messlücken und native Fehlwertkennzeichen sind unverändert sichtbar. Historische und aktuelle Archive können überlappen; native Zeilenzahlen zählen keine eindeutigen Messzeitpunkte.",
+        "Regionale Messstationen sind keine Bahnhöfe. Historische/recent-Überlappungen werden nach UTC-Zeit dedupliziert, historische Meldung zuerst. Nicht explizit aufgelöste Zeitreferenzen bleiben als native Zeilen sichtbar und werden nicht aggregiert. Produkte ohne Messstation/Zeitraum innerhalb 50 km bleiben außerhalb der Abdeckung."
+      ],
+      "recordDefinition": "Native Beobachtungszeilen einschließlich Fehlwert- und Qualitätskennzeichen; historische und recent-Zeiträume überlappen teilweise. Keine Zahl eindeutiger Messzeitpunkte, Messstationen oder gültiger Einzelwerte.",
+      "inventoryUrl": "/data/retrieval/dwd.json.gz"
+    },
+    {
+      "sourceId": "zensus",
+      "freshness": {
+        "sourceId": "zensus",
+        "status": "current",
+        "statusLabel": "Neueste Referenzausgabe",
+        "checkedAt": "2026-09-23T20:51:30.360411+00:00",
+        "referenceLabel": "Zensusstichtag 15.05.2022",
+        "summary": "Alle aktuell amtlich angebotenen Zensus-Gitterpakete sind als neuester Referenzbestand gespeichert. Originalstichtag 15.05.2022 bleibt sichtbar; der Zeitraum 2024–August 2026 gilt für Beobachtungsreihen.",
+        "gaps": [
+          "Zensus-Stichtag 15.05.2022; keine Fortschreibung oder Beobachtungsreihe für 2024–2026.",
+          "Alle 50 angebotenen Rasterthemen und Zensus-Verwaltungsgrenzen sind gespeichert; Regionaltabellen und individuelle Sonderauswertungen gehören nicht zu diesem Rasterarchiv.",
+          "Veröffentlichte Werte sind statistisch geschützt. Fehlende Zellen bleiben unbekannt; keine Nullsetzung."
+        ],
+        "evidenceUrl": "/data/freshness/zensus.json"
+      },
+      "name": "Zensus 2022 · Rasterdaten",
+      "retrievedAt": "2026-09-23T20:49:40.403029+00:00",
+      "scope": "Deutschland: alle 50 im geprüften offiziellen Katalog angebotenen Zensus-2022-Themenpakete auf Gitterebene sowie die Kartengrundlage der Verwaltungsgrenzen zum 15.05.2022.",
+      "status": "retrieved",
+      "archiveBytes": 1168145149,
+      "metadataBytes": 118084,
+      "fileCount": 52,
+      "dataFileCount": 51,
+      "preparedBytes": 85578329,
+      "preparedFileCount": 1314,
+      "integrationNote": "Neueste verfügbare Zensus-Referenzraster zum 15.05.2022 an 1.262 belegten Ausgangspunkten: Bevölkerung nach Zellmittelpunkten in drei Radien; weitere Themen als Originalwerte der Zelle am Ausgangspunkt. Keine Fortschreibung auf das Analysedatum. Aufbereitete Bytes enthalten Wörterbücher und Stationsdateien mit bundesweitem Zensuskontext; diese werden nur einmal gezählt.",
+      "datasets": [
+        {
+          "title": "Bevölkerung und Demografie",
+          "bytes": 496607633,
+          "fileCount": 19,
+          "referencePeriod": "2022-05-15",
+          "notes": "Bevölkerungszahlen, Altersgruppen und Altersanteile, Durchschnittsalter, Staatsangehörigkeit, Geburtsland, Familienstand und Religion. Alle publizierten Rasterauflösungen der jeweiligen Pakete; Rasterkoordinaten in EPSG:3035. Originalwerte und Geheimhaltungskennzeichen bleiben unverändert."
+        },
+        {
+          "title": "Haushalte und Familien",
+          "bytes": 152748129,
+          "fileCount": 7,
+          "referencePeriod": "2022-05-15",
+          "notes": "Haushaltsgrößen und Haushaltstypen, Kernfamilien nach Größe und Kindern sowie Seniorenstatus privater Haushalte. Originalwerte und Geheimhaltungskennzeichen bleiben unverändert."
+        },
+        {
+          "title": "Gebäude und Wohnungen",
+          "bytes": 454452972,
+          "fileCount": 25,
+          "referencePeriod": "2022-05-15",
+          "notes": "Nettokaltmieten, Wohnflächen, Eigentümer- und Leerstandsquoten, Räume, Gebäudetypen und -größen, Baujahre, Heizungsarten und Energieträger. Zwei Baujahrespakete sind tatsächlich 7z-Archive trotz veröffentlichter .zip-Dateinamen; beide vollständig CRC-geprüft. Eine zusätzlich heruntergeladene XLSX-Datei liefert die im Archiv fehlende Datensatzbeschreibung. Originalwerte und Geheimhaltungskennzeichen bleiben unverändert."
+        },
+        {
+          "title": "Kartengrundlage zum Zensus-Stichtag",
+          "bytes": 64336415,
+          "fileCount": 1,
+          "referencePeriod": "2022-05-15",
+          "notes": "Administrative Grenzen Deutschlands zum 15.05.2022 in nativen Shapefiles (EPSG:25832 / UTM32); © GeoBasis-DE / BKG 2023. Originalwerte und Geheimhaltungskennzeichen bleiben unverändert."
+        }
+      ],
+      "missing": [
+        "Zensus-Stichtag 15.05.2022; keine Fortschreibung oder Beobachtungsreihe für 2024–2026.",
+        "Alle 50 angebotenen Rasterthemen und Zensus-Verwaltungsgrenzen sind gespeichert; Regionaltabellen und individuelle Sonderauswertungen gehören nicht zu diesem Rasterarchiv.",
+        "Veröffentlichte Werte sind statistisch geschützt. Fehlende Zellen bleiben unbekannt; keine Nullsetzung.",
+        "Bevölkerungspuffer können unberichtete oder nicht numerische Zellen enthalten; deren Abdeckung wird je Station und Radius ausgewiesen. Teilsummen sind wegen Cell-Key-Schutz keine garantierten Untergrenzen. Andere Themen werden als Originalzelle am Anker gezeigt, nicht über Puffer aggregiert."
+      ],
+      "recordDefinition": null,
+      "inventoryUrl": "/data/retrieval/zensus.json"
+    },
+    {
+      "sourceId": "facility_history",
+      "freshness": {
+        "sourceId": "facility_history",
+        "status": "partial_period_aggregate_history",
+        "statusLabel": "Teilzeitraum · veröffentlichte Auswertung",
+        "checkedAt": "2026-09-23T20:53:06.699873+00:00",
+        "referenceLabel": "01.10.2025–31.03.2026",
+        "summary": "182 bundesweite Tageswerte für 01.10.2025–31.03.2026: Störungsanteile für Aufzüge und Rolltreppen in Deutschland. Keine vollständige Anlagenstatushistorie.",
+        "gaps": [
+          "Für 01.01.2024–30.09.2025 und 01.04.–31.08.2026 enthält diese veröffentlichte WDR-Tabelle keine Beobachtungen.",
+          "Native Fünf-Minuten-Meldungen einzelner Anlagen und stationsbezogene Auswertungen sind nicht enthalten."
+        ],
+        "evidenceUrl": "/data/freshness/facility_history.json"
+      },
+      "name": "WDR Data · Anlagenhistorie",
+      "retrievedAt": "2026-09-23T20:53:06.699873+00:00",
+      "scope": "Deutschland; bundesweite Tagesanteile gestörter Aufzüge und Rolltreppen.",
+      "status": "partial",
+      "archiveBytes": 3671,
+      "metadataBytes": 0,
+      "fileCount": 1,
+      "dataFileCount": 1,
+      "preparedBytes": 32909,
+      "preparedFileCount": 3,
+      "integrationNote": "Veröffentlichte WDR-Auswertung von Aufzugs- und Rolltreppenstörungen vom 01.10.2025 bis 31.03.2026. Ausschließlich bundesweite Tagesreihen; keine regionalen Tabellen, Stationsrankings oder Einzelanlagenmeldungen.",
+      "datasets": [
+        {
+          "title": "Deutschland: tägliche Störungsquote von Aufzügen und Rolltreppen",
+          "bytes": 3671,
+          "fileCount": 1,
+          "referencePeriod": "2025-10-01 to 2026-03-31",
+          "notes": null,
+          "url": "https://datawrapper.dwcdn.net/JDmCl/7/dataset.csv",
+          "records": 182
+        }
+      ],
+      "missing": [
+        "Abgedeckt ist nur 01.10.2025–31.03.2026. Die ursprünglichen Fünf-Minuten-Meldungen und eine vollständige Historie für 2024 bis August 2026 wurden nicht abgerufen.",
+        "Der WDR wertet FaSta-Meldungen für 06:00–24:00 Uhr aus. Wartungen zählen als Störungen; Bau- und Umbauzeiten nicht.",
+        "Die zwei Tagesreihen gelten zusammengefasst für Deutschland; sie beschreiben keinen einzelnen Bahnhof oder Anlagenstatus.",
+        "Die importierte Tabelle nennt keine bundesweiten täglichen Anlagen-Nenner. Prozentreihen dürfen nicht addiert werden."
+      ],
+      "recordDefinition": null,
+      "inventoryUrl": "/data/retrieval/facility_history.json"
+    },
+    {
+      "sourceId": "police_statistics",
+      "freshness": {
+        "sourceId": "police_statistics",
+        "status": "partial",
+        "statusLabel": "Veröffentlichter Teilbestand",
+        "checkedAt": "2026-09-23T21:36:03.051394+00:00",
+        "referenceLabel": "Berichtsjahre 2024 und 2025",
+        "summary": "Bundesweite Deliktszahlen an Bahnhöfen und in Zügen für die Berichtsjahre 2024 und 2025.",
+        "gaps": [
+          "Nur bundesweite Summen 2024 und 2025; keine Beobachtungen für Januar bis August 2026.",
+          "Massendelikte 2024/2025 sowie Betäubungsmitteldelikte 2024 fehlen laut Quelle.",
+          "Fallzahlen sind ohne Nutzungsnenner keine Risikoraten; sie unterliegen Nachmeldungen und Änderungen der Erfassung.",
+          "Bundesweite Summen beschreiben keinen einzelnen Bahnhof.",
+          "Original-PDF-Download lokal durch TLS-Verbindungsfehler nicht möglich; nutzbare Tabellenauszüge aus der offiziellen PDF-Webextraktion wurden verifiziert und gespeichert."
+        ],
+        "evidenceUrl": "/data/freshness/police_statistics.json"
+      },
+      "name": "Bundespolizei · Deutschlandstatistik",
+      "retrievedAt": "2026-09-23T21:36:03.051394+00:00",
+      "scope": "Deutschland; landesweite PES-Summen der Bundespolizei, keine Daten zu einzelnen Stationen.",
+      "status": "partial",
+      "archiveBytes": 4303,
+      "metadataBytes": 0,
+      "fileCount": 1,
+      "dataFileCount": 1,
+      "preparedBytes": 506426,
+      "preparedFileCount": 4,
+      "integrationNote": "Bundesweite Deliktszahlen an Bahnhöfen und in Zügen für die Berichtsjahre 2024 und 2025. Deutschland; landesweite PES-Summen der Bundespolizei, keine Daten zu einzelnen Stationen. Gemeinsame Übersicht der ergänzenden Quellen wird hier einmal gezählt.",
+      "datasets": [
+        {
+          "title": "Deutschland: Bahnhöfe und Züge – Deliktszahlen",
+          "bytes": 4303,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://dserver.bundestag.de/btd/21/041/2104141.pdf",
+          "records": 14
+        }
+      ],
+      "missing": [],
+      "recordDefinition": null,
+      "inventoryUrl": "/data/retrieval/police_statistics.json"
+    },
+    {
+      "sourceId": "skid",
+      "freshness": {
+        "sourceId": "skid",
+        "status": "partial",
+        "statusLabel": "Veröffentlichter Teilbestand",
+        "checkedAt": "2026-09-23T21:36:03.051394+00:00",
+        "referenceLabel": "19.02.2024–07.06.2024",
+        "summary": "Gewichtete nationale Befragungsergebnisse zum Sicherheitsgefühl am Tag und in der Nacht.",
+        "gaps": [
+          "Nur die 2024 erhobenen Sicherheitsgefühle; keine Opfererfahrungen mit Bezugsjahr 2023 und keine Vergleichswerte 2020.",
+          "Subjektive nationale Angaben können nicht als Zustand oder Kriminalitätsrate einer einzelnen Station gelesen werden.",
+          "Veröffentlichte Gruppen-Stichprobenumfänge sind keine Reisendenzahlen; Konfidenzintervall-Endpunkte nicht numerisch übernommen."
+        ],
+        "evidenceUrl": "/data/freshness/skid.json"
+      },
+      "name": "BKA · SKiD 2024",
+      "retrievedAt": "2026-09-23T21:36:03.051394+00:00",
+      "scope": "Deutschland; Wohnbevölkerung ab 16 Jahren in Privathaushalten. Keine stationsspezifischen Werte.",
+      "status": "partial",
+      "archiveBytes": 9454,
+      "metadataBytes": 0,
+      "fileCount": 1,
+      "dataFileCount": 1,
+      "preparedBytes": 16863,
+      "preparedFileCount": 3,
+      "integrationNote": "Gewichtete nationale Befragungsergebnisse zum Sicherheitsgefühl am Tag und in der Nacht. Deutschland; Wohnbevölkerung ab 16 Jahren in Privathaushalten. Keine stationsspezifischen Werte.",
+      "datasets": [
+        {
+          "title": "SKiD 2024: Sicherheitsgefühl ohne Begleitung",
+          "bytes": 9454,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://skid.bka.de/assets/files/SKiD2024_Ergebnisbericht.pdf",
+          "records": 30
+        }
+      ],
+      "missing": [],
+      "recordDefinition": null,
+      "inventoryUrl": "/data/retrieval/skid.json"
+    },
+    {
+      "sourceId": "operational_archive",
+      "freshness": {
+        "sourceId": "operational_archive",
+        "status": "integrated_with_coverage_limits",
+        "statusLabel": "Veröffentlichter Teilbestand",
+        "checkedAt": "2026-09-23T21:35:56.864793+00:00",
+        "referenceLabel": "01.08.2026–31.08.2026",
+        "summary": "14.516.986 archivierte Zughalte im August 2026; 5.215 Bahnhöfe eindeutig über EVA zugeordnet. Gemeldete Änderungen und Ausfallkennzeichen mit dokumentierten Planzeit-Ersetzungen. keine vollständige Ist-Zeitmessung.",
+        "gaps": [
+          "Community-Archiv von Piet Brömmel aus der DB Timetables API. Es enthält gemeldete Änderungen und Ausfallkennzeichen; geänderte Zeiten sind keine unabhängig gemessenen tatsächlichen Ankunfts- oder Abfahrtszeiten.",
+          "Die Aufbereitung des Herausgebers ersetzt fehlende Änderungszeiten durch Planzeiten und fehlende Ausfallkennzeichen durch false. Null Minuten beziehungsweise kein Ausfallkennzeichen belegen deshalb weder Pünktlichkeit noch lückenlose Beobachtung. Welche Werte auf dieser Ersetzung beruhen, ist im Monatsarchiv nicht mehr feststellbar.",
+          "Berücksichtigt wird ausschließlich August 2026 nach dem Archivfeld time in deutscher Ortszeit (Europe/Berlin): geänderte Abfahrt, ersatzweise geänderte Ankunft, mit den genannten Planzeit-Ersetzungen. Die Tageszuordnung entspricht diesem Archivfeld, nicht zwingend dem geplanten Verkehrstag.",
+          "Ein Datensatz beschreibt einen archivierten Zughalt. Die Verspätung verwendet die Abfahrt, ersatzweise die Ankunft. Ausfallkennzeichen für Ankunft und Abfahrt können sich überlappen; ein ausgefallener Zughalt wird nicht in Verspätungsmittelwerte einbezogen.",
+          "Zuordnung ausschließlich über eindeutige EVA-Kennungen des aktuellen Bahnhofskatalogs; führende Null-Auffüllung wird vereinheitlicht, die Originalkennungen bleiben erhalten. Mehrdeutige und fehlende Zuordnungen bleiben separat dokumentiert. Fehlende Bahnhöfe oder Tage sind unbekannt, keine Nullwerte.",
+          "Erfasstes Aufkommen ist weder eine Fahrgastzahl noch ein vollständiger Sollfahrplan. Mindestens ein Datensatz an jedem Tag beweist keine vollständige zeitliche Erfassung. Das verarbeitete Monatsarchiv enthält keine einzelnen Abrufzeitpunkte oder Ausfälle der Datensammlung."
+        ],
+        "evidenceUrl": "/data/freshness/operational_archive.json"
+      },
+      "name": "DB-API-Archiv · Betrieb August 2026",
+      "retrievedAt": "2026-09-23T21:33:48.435290+00:00",
+      "scope": "Deutschland; alle im August-Monatsarchiv enthaltenen EVA-Kennungen, stationäre Zuordnung nur bei eindeutiger Kennung.",
+      "status": "partial",
+      "archiveBytes": 606759088,
+      "metadataBytes": 30823,
+      "fileCount": 3,
+      "dataFileCount": 1,
+      "preparedBytes": 60041631,
+      "preparedFileCount": 5221,
+      "integrationNote": "14.516.986 archivierte Zughalte im August 2026; 5.215 Bahnhöfe eindeutig über EVA zugeordnet. Gemeldete Änderungen und Ausfallkennzeichen mit dokumentierten Planzeit-Ersetzungen. keine vollständige Ist-Zeitmessung. Deutschland; alle im August-Monatsarchiv enthaltenen EVA-Kennungen, stationäre Zuordnung nur bei eindeutiger Kennung.",
+      "datasets": [
+        {
+          "title": "DB Timetables Monatsarchiv August 2026",
+          "bytes": 606728265,
+          "fileCount": 1,
+          "referencePeriod": "2026-08-01 to 2026-08-31",
+          "notes": null,
+          "url": "https://huggingface.co/datasets/piebro/deutsche-bahn-data/resolve/c5a576a268007ec925d8b61e4e5fd23eb2c6ee98/monthly_processed_data/data-2026-08.parquet?download=true",
+          "records": 14516986
+        },
+        {
+          "title": "Herausgeber: README.md",
+          "bytes": 11802,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://raw.githubusercontent.com/piebro/deutsche-bahn-data/350ea4066229d2bba627f6a2741a7d9576fd9e91/README.md",
+          "records": null
+        },
+        {
+          "title": "Herausgeber: scripts/create_monthly_data_release.py",
+          "bytes": 19021,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://raw.githubusercontent.com/piebro/deutsche-bahn-data/350ea4066229d2bba627f6a2741a7d9576fd9e91/scripts/create_monthly_data_release.py",
+          "records": null
+        }
+      ],
+      "missing": [
+        "Community-Archiv von Piet Brömmel aus der DB Timetables API. Es enthält gemeldete Änderungen und Ausfallkennzeichen; geänderte Zeiten sind keine unabhängig gemessenen tatsächlichen Ankunfts- oder Abfahrtszeiten.",
+        "Die Aufbereitung des Herausgebers ersetzt fehlende Änderungszeiten durch Planzeiten und fehlende Ausfallkennzeichen durch false. Null Minuten beziehungsweise kein Ausfallkennzeichen belegen deshalb weder Pünktlichkeit noch lückenlose Beobachtung. Welche Werte auf dieser Ersetzung beruhen, ist im Monatsarchiv nicht mehr feststellbar.",
+        "Berücksichtigt wird ausschließlich August 2026 nach dem Archivfeld time in deutscher Ortszeit (Europe/Berlin): geänderte Abfahrt, ersatzweise geänderte Ankunft, mit den genannten Planzeit-Ersetzungen. Die Tageszuordnung entspricht diesem Archivfeld, nicht zwingend dem geplanten Verkehrstag.",
+        "Ein Datensatz beschreibt einen archivierten Zughalt. Die Verspätung verwendet die Abfahrt, ersatzweise die Ankunft. Ausfallkennzeichen für Ankunft und Abfahrt können sich überlappen; ein ausgefallener Zughalt wird nicht in Verspätungsmittelwerte einbezogen.",
+        "Zuordnung ausschließlich über eindeutige EVA-Kennungen des aktuellen Bahnhofskatalogs; führende Null-Auffüllung wird vereinheitlicht, die Originalkennungen bleiben erhalten. Mehrdeutige und fehlende Zuordnungen bleiben separat dokumentiert. Fehlende Bahnhöfe oder Tage sind unbekannt, keine Nullwerte.",
+        "Erfasstes Aufkommen ist weder eine Fahrgastzahl noch ein vollständiger Sollfahrplan. Mindestens ein Datensatz an jedem Tag beweist keine vollständige zeitliche Erfassung. Das verarbeitete Monatsarchiv enthält keine einzelnen Abrufzeitpunkte oder Ausfälle der Datensammlung."
+      ],
+      "recordDefinition": null,
+      "inventoryUrl": "/data/retrieval/operational_archive.json"
+    },
+    {
+      "sourceId": "station_plans",
+      "freshness": {
+        "sourceId": "station_plans",
+        "status": "retrieved_partial_coverage",
+        "statusLabel": "Neueste zugängliche Referenzdaten",
+        "checkedAt": "2026-09-23T21:55:58.850844+00:00",
+        "referenceLabel": "Quellenstände je Datei dokumentiert",
+        "summary": "Offizielle PDF-Lagepläne unterstützen die Zuordnung von Bahnsteigen, Zugängen, Unterführungen, Aufzügen und Servicebereichen.",
+        "gaps": [
+          "HTTP 404 bedeutet: Am geprüften DB-Downloadendpunkt für die StaDa-ID wurde kein PDF bereitgestellt; andere Publikationsorte oder interaktive Karten sind dadurch nicht ausgeschlossen.",
+          "Pläne zeigen den aktuellen veröffentlichten Referenzstand; sie rekonstruieren keinen Zustand von 2024 bis August 2026.",
+          "Ein fehlender Plan ist unbekannte Datenverfügbarkeit, nicht das Fehlen von Zugängen oder Ausstattung.",
+          "Ein planbezogenes Erhebungsdatum ist nicht einheitlich veröffentlicht. HTTP- und PDF-Dateidaten bleiben davon getrennt.",
+          "Keine offene Nachnutzungslizenz ermittelt; Quellenangabe und Originaldokument erhalten."
+        ],
+        "evidenceUrl": "/data/freshness/station_plans.json"
+      },
+      "name": "DB InfraGO · Stationspläne",
+      "retrievedAt": "2026-09-23T21:55:56.509203+00:00",
+      "scope": "Deutschland: 107 verfügbare Pläne; 5393 von 5393 Katalogstationen geprüft.",
+      "status": "retrieved_partial_coverage",
+      "archiveBytes": 41224984,
+      "metadataBytes": 0,
+      "fileCount": 107,
+      "dataFileCount": 107,
+      "preparedBytes": 41421235,
+      "preparedFileCount": 217,
+      "integrationNote": "Offizielle PDF-Lagepläne unterstützen die Zuordnung von Bahnsteigen, Zugängen, Unterführungen, Aufzügen und Servicebereichen. Deutschland: 107 verfügbare Pläne; 5393 von 5393 Katalogstationen geprüft.",
+      "datasets": [
+        {
+          "title": "DB-Stationsplan: Aachen Hbf",
+          "bytes": 272973,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/1.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Aschaffenburg Hbf",
+          "bytes": 227174,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/187.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Augsburg Hbf",
+          "bytes": 450858,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/220.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Bamberg",
+          "bytes": 183801,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/393.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Barmbek",
+          "bytes": 380092,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/412.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Berlin Alexanderplatz",
+          "bytes": 300911,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/53.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Berlin Friedrichstraße",
+          "bytes": 420587,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/527.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Berlin Gesundbrunnen",
+          "bytes": 916295,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/528.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Berlin Hackescher Markt",
+          "bytes": 90307,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/2447.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Berlin Hauptbahnhof",
+          "bytes": 1682611,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/1071.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Berlin Ostbahnhof",
+          "bytes": 426038,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/530.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Berlin Ostkreuz",
+          "bytes": 394910,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/4809.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Berlin Südkreuz",
+          "bytes": 560876,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/4859.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Berlin Warschauer Straße",
+          "bytes": 143001,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/6550.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Berlin Zoologischer Garten",
+          "bytes": 610738,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/533.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Berlin-Lichtenberg",
+          "bytes": 232443,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/549.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Berlin-Spandau",
+          "bytes": 233834,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/561.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Berlin-Wannsee",
+          "bytes": 408688,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/566.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Bielefeld Hbf",
+          "bytes": 291774,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/622.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Bochum Hbf",
+          "bytes": 242204,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/724.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Bonn Hbf",
+          "bytes": 258320,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/767.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Braunschweig Hbf",
+          "bytes": 302900,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/835.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Bremen Hbf",
+          "bytes": 439753,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/855.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Bremerhaven Hbf",
+          "bytes": 233208,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/868.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Chemnitz Hbf",
+          "bytes": 420973,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/1040.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Coburg",
+          "bytes": 226302,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/1059.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Cottbus Hbf",
+          "bytes": 457189,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/1077.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Darmstadt Hbf",
+          "bytes": 422875,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/1126.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Delmenhorst",
+          "bytes": 218079,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/1159.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Dortmund Hbf",
+          "bytes": 475122,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/1289.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Dresden Hbf",
+          "bytes": 631637,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/1343.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Dresden-Neustadt",
+          "bytes": 290134,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/1352.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Duisburg Hbf",
+          "bytes": 459242,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/1374.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Düsseldorf Hbf",
+          "bytes": 507702,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/1401.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Erfurt Hbf",
+          "bytes": 349234,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/1634.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Essen Hbf",
+          "bytes": 603580,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/1690.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Frankfurt (Main) Hbf",
+          "bytes": 541445,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/1866.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Frankfurt (Oder)",
+          "bytes": 267254,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/1859.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Frankfurt am Main Flughafen Fernbahnhof",
+          "bytes": 414280,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/7982.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Freiburg (Breisgau) Hbf",
+          "bytes": 545117,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/1893.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Freising",
+          "bytes": 184654,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/1908.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Fulda",
+          "bytes": 277036,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/1973.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Garmisch-Partenkirchen",
+          "bytes": 259157,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/2014.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Gelsenkirchen Hbf",
+          "bytes": 313677,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/2052.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Gießen",
+          "bytes": 1097460,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/2120.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Görlitz",
+          "bytes": 340681,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/2194.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Göttingen",
+          "bytes": 395111,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/2218.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Hagen Hbf",
+          "bytes": 362397,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/2457.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Halle (Saale) Hbf",
+          "bytes": 475873,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/2498.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Hamburg Dammtor",
+          "bytes": 278450,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/2513.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Hamburg Hbf",
+          "bytes": 626866,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/2514.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Hamburg-Altona",
+          "bytes": 440835,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/2517.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Hamburg-Bergedorf",
+          "bytes": 277104,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/2518.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Hamburg-Harburg",
+          "bytes": 245694,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/2519.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Hamm (Westf) Hbf",
+          "bytes": 440651,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/2528.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Hanau Hbf",
+          "bytes": 288861,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/2537.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Hannover Hbf",
+          "bytes": 388160,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/2545.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Heidelberg Hbf",
+          "bytes": 472087,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/2628.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Heilbronn Hbf",
+          "bytes": 321781,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/2648.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Hildesheim Hbf",
+          "bytes": 256289,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/2765.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Karlsruhe Hbf",
+          "bytes": 486806,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/3107.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Kassel Hbf",
+          "bytes": 836208,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/3124.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Kassel-Wilhelmshöhe",
+          "bytes": 200190,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/3127.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Kiel Hbf",
+          "bytes": 235883,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/3174.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Koblenz Hbf",
+          "bytes": 514917,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/3299.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Krefeld Hbf",
+          "bytes": 272399,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/3403.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Köln Hbf",
+          "bytes": 503388,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/3320.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Köln Messe/Deutz",
+          "bytes": 369980,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/3329.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Leipzig Hbf",
+          "bytes": 491976,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/3631.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Lübeck Hbf",
+          "bytes": 188270,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/3807.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Lüneburg",
+          "bytes": 344657,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/3855.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Magdeburg Hbf",
+          "bytes": 273990,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/3881.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Mainz Hbf",
+          "bytes": 442850,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/3898.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Mannheim Hbf",
+          "bytes": 778798,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/3925.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Mönchengladbach Hbf",
+          "bytes": 305718,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/4162.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: München Hbf",
+          "bytes": 548082,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/4234.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: München Ost",
+          "bytes": 412294,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/4241.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: München-Pasing",
+          "bytes": 237204,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/4266.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Münster (Westf) Hbf",
+          "bytes": 492526,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/4280.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Neumünster",
+          "bytes": 293629,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/4420.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Nürnberg Hbf",
+          "bytes": 404571,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/4593.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Oberhausen Hbf",
+          "bytes": 430686,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/4648.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Oldenburg (Oldb) Hbf",
+          "bytes": 413688,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/4765.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Osnabrück Hbf",
+          "bytes": 418871,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/4787.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Passau Hbf",
+          "bytes": 341190,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/4872.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Plattling",
+          "bytes": 405044,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/4952.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Regensburg Hbf",
+          "bytes": 388737,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/5169.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Rheine",
+          "bytes": 208203,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/5251.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Rosenheim",
+          "bytes": 309274,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/5348.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Rostock Hbf",
+          "bytes": 425681,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/5365.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Saarbrücken Hbf",
+          "bytes": 331081,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/5451.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Schwerin Hbf",
+          "bytes": 163230,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/5755.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Siegburg/Bonn",
+          "bytes": 314169,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/5840.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Stendal Hbf",
+          "bytes": 286797,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/6010.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Stralsund Hbf",
+          "bytes": 257841,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/6049.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Straubing",
+          "bytes": 240157,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/6056.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Stuttgart Hbf",
+          "bytes": 477462,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/6071.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Trier Hbf",
+          "bytes": 185824,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/6264.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Tübingen Hbf",
+          "bytes": 345557,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/6279.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Uelzen",
+          "bytes": 413289,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/6310.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Ulm Hbf",
+          "bytes": 324958,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/6323.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Weimar",
+          "bytes": 253427,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/6617.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Westerland (Sylt)",
+          "bytes": 313857,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/6714.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Wiesbaden Hbf",
+          "bytes": 131165,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/6744.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Wolfsburg Hbf",
+          "bytes": 231708,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/6859.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Wuppertal Hbf",
+          "bytes": 365233,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/6914.pdf",
+          "records": null
+        },
+        {
+          "title": "DB-Stationsplan: Würzburg Hbf",
+          "bytes": 336234,
+          "fileCount": 1,
+          "referencePeriod": null,
+          "notes": null,
+          "url": "https://www.bahnhof.de/downloads/station-plans/6945.pdf",
+          "records": null
+        }
+      ],
+      "missing": [
+        "HTTP 404 bedeutet: Am geprüften DB-Downloadendpunkt für die StaDa-ID wurde kein PDF bereitgestellt; andere Publikationsorte oder interaktive Karten sind dadurch nicht ausgeschlossen.",
+        "Pläne zeigen den aktuellen veröffentlichten Referenzstand; sie rekonstruieren keinen Zustand von 2024 bis August 2026.",
+        "Ein fehlender Plan ist unbekannte Datenverfügbarkeit, nicht das Fehlen von Zugängen oder Ausstattung.",
+        "Ein planbezogenes Erhebungsdatum ist nicht einheitlich veröffentlicht. HTTP- und PDF-Dateidaten bleiben davon getrennt.",
+        "Keine offene Nachnutzungslizenz ermittelt; Quellenangabe und Originaldokument erhalten."
+      ],
+      "recordDefinition": null,
+      "inventoryUrl": "/data/retrieval/station_plans.json"
+    },
+    {
+      "sourceId": "mapillary",
+      "freshness": {
+        "sourceId": "mapillary",
+        "status": "access_required",
+        "statusLabel": "Zugang erforderlich",
+        "checkedAt": "2026-09-23T21:32:05.876035+00:00",
+        "referenceLabel": "Keine Beobachtungen abgerufen",
+        "summary": "Straßenbilder könnten sichtbare Zugänge, Hindernisse und Zustand zum Aufnahmezeitpunkt ergänzen. Es wurden keine Bilder abgerufen.",
+        "gaps": [
+          "Für den dokumentierten automatischen Bildabruf ist ein Zugriffstoken erforderlich; ein solcher wurde nicht bereitgestellt.",
+          "Keine Bilder oder Bildmetadaten importiert. Die Quelle liefert derzeit keine Werte und keine Stationszuordnung.",
+          "Bei späterer Freigabe ausschließlich Aufnahmen vom 01.01.2024 bis 31.08.2026; Aufnahmezeit und Lizenz je Bild erhalten. Bildhelligkeit ist keine Lux-Messung."
+        ],
+        "evidenceUrl": "/data/freshness/mapillary.json"
+      },
+      "name": "Mapillary · Straßenbilder (Zugang fehlt)",
+      "retrievedAt": null,
+      "scope": "Potenzielle überregionale Community-Abdeckung; tatsächliche örtliche und zeitliche Abdeckung nicht geprüft.",
+      "status": "not_retrieved",
+      "archiveBytes": 0,
+      "metadataBytes": 0,
+      "fileCount": 0,
+      "dataFileCount": 0,
+      "preparedBytes": 2672,
+      "preparedFileCount": 2,
+      "integrationNote": "Straßenbilder könnten sichtbare Zugänge, Hindernisse und Zustand zum Aufnahmezeitpunkt ergänzen. Es wurden keine Bilder abgerufen. Potenzielle überregionale Community-Abdeckung; tatsächliche örtliche und zeitliche Abdeckung nicht geprüft.",
+      "datasets": [],
+      "missing": [
+        "Für den dokumentierten automatischen Bildabruf ist ein Zugriffstoken erforderlich; ein solcher wurde nicht bereitgestellt.",
+        "Keine Bilder oder Bildmetadaten importiert. Die Quelle liefert derzeit keine Werte und keine Stationszuordnung.",
+        "Bei späterer Freigabe ausschließlich Aufnahmen vom 01.01.2024 bis 31.08.2026; Aufnahmezeit und Lizenz je Bild erhalten. Bildhelligkeit ist keine Lux-Messung."
+      ],
+      "recordDefinition": null,
+      "inventoryUrl": "/data/retrieval/mapillary.json"
+    },
+    {
+      "sourceId": "field",
+      "freshness": {
+        "sourceId": "field",
+        "status": "not_collected",
+        "statusLabel": "Nicht erhoben",
+        "checkedAt": null,
+        "referenceLabel": "Kein Erhebungsdatum",
+        "summary": "Keine freigegebenen eigenen Studienbeobachtungen vorhanden. Diese Quelle bietet keinen öffentlichen Download.",
+        "gaps": [],
+        "evidenceUrl": null
+      },
+      "name": "Feldbeobachtungen & Teilnehmendendaten",
+      "retrievedAt": null,
+      "scope": "Keine Daten abgerufen.",
+      "status": "not_retrieved",
+      "archiveBytes": 0,
+      "metadataBytes": 0,
+      "fileCount": 0,
+      "dataFileCount": 0,
+      "preparedBytes": 0,
+      "preparedFileCount": 0,
+      "integrationNote": "Keine Daten im Stationsprofil.",
+      "datasets": [],
+      "missing": [
+        "Keine freigegebenen Studiendaten vorhanden."
+      ],
+      "recordDefinition": null,
+      "inventoryUrl": "/data/retrieval/field.json"
+    }
+  ],
+  "retentionCleanup": {
+    "previousArchiveBytes": 19500619806,
+    "previousPreparedBytes": 2233344280,
+    "reclaimedInventoriedBytes": 10974294198,
+    "scope": "Difference in measured source and prepared file sizes; excludes duplicate build output and temporary working files."
+  },
+  "rangeCleanup": {
+    "previousArchiveBytes": 10006301067,
+    "previousPreparedBytes": 2188635565,
+    "reclaimedInventoriedBytes": 1435266744,
+    "analysisEndDate": "2026-08-31",
+    "scope": "Measured source and prepared file difference for the August cutoff; excludes duplicate builds and temporary files."
+  }
+}

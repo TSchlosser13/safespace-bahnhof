@@ -1,0 +1,100 @@
+/* Export has its own readable document layout; other workspaces stay unchanged. */
+.workspace.export-workspace{height:auto;min-height:100dvh;overflow:visible}
+.workspace.export-workspace .page-content{height:auto;min-height:100dvh;display:block;max-width:1560px;padding:28px clamp(20px,3vw,42px) 40px;overflow:visible}
+.workspace.export-workspace .page-heading{margin:0 0 24px;min-height:0}
+.workspace.export-workspace .page-heading h1{font-size:32px;line-height:1.25}
+.workspace.export-workspace .integration-timebar{gap:16px;padding:18px 20px;margin-bottom:24px;align-items:flex-end;border-color:#c9d0d8;border-radius:9px}
+.workspace.export-workspace .integration-timebar label{flex-direction:column;align-items:flex-start;gap:7px;font-size:14px;color:#424b55}
+.workspace.export-workspace .integration-timebar input,.workspace.export-workspace .integration-timebar button,.workspace.export-workspace .integration-timebar [data-slot=select-trigger]{height:44px;min-height:44px;font-size:14px;padding:9px 12px}
+.workspace.export-workspace .integration-timebar input{width:116px}
+.workspace.export-workspace .integration-timebar input[type=date]{width:166px}
+.workspace.export-workspace .integration-timebar .timebar-note{font-size:12px;line-height:1.6;color:#56616e;align-self:center}
+.export-workspace .compact-export.export-with-preview{display:flex;flex-direction:column;flex:none;gap:30px;min-height:0;overflow:visible;color:#282d37}
+.export-workspace .export-with-preview .panel{border:1px solid #c9d0d8;border-radius:10px;box-shadow:0 1px 2px #202b3c04}
+.export-workspace .export-with-preview h2{font-size:21px;line-height:1.35;font-weight:650;letter-spacing:-.2px}
+.export-workspace .export-with-preview .export-configuration{border-top:3px solid #ec0016}
+.export-workspace .export-with-preview .export-selection{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px;padding:24px;flex:none}
+.export-workspace .export-with-preview .export-selection-title{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.export-workspace .export-with-preview .export-selection-title h2{font-size:21px}
+.export-workspace .export-with-preview .export-selection p{font-size:16px;line-height:1.6;color:#4b5663;margin-top:10px}
+.export-workspace .export-with-preview .export-stations{display:flex;gap:8px;flex-wrap:wrap;margin:0}
+.export-workspace .export-with-preview .export-stations .pill{font-size:14px;line-height:1.4;font-weight:500;padding:6px 10px;background:#f0f3f6;border-color:#d2d9e0;color:#394554;white-space:normal}
+.export-workspace .export-with-preview .export-selection-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.export-workspace .export-with-preview .export-selection-actions>button{height:44px;min-height:44px;padding:0 16px;font-size:14px;line-height:1;font-weight:550}
+.export-workspace .export-with-preview .export-selection-actions .count-badge{font-size:12px;margin-left:4px}
+.export-workspace .export-with-preview .export-info{display:grid;grid-template-columns:minmax(240px,1fr) minmax(240px,1fr);align-items:start;gap:28px;padding:22px 24px;background:#f7f9fb;border-top:1px solid #d7dde4;flex:none}
+.export-workspace .export-with-preview .export-session-input{display:flex;flex-direction:column;align-items:flex-start;gap:9px}
+.export-workspace .export-with-preview .export-session-input label,.export-workspace .export-with-preview .export-spatial-setting h3{font-size:14px;line-height:1.5;font-weight:550;color:#424c58;margin:0}
+.export-workspace .export-with-preview .export-session-input label small{display:inline;font-size:14px;font-weight:400;color:#596573;margin-left:4px}
+.export-workspace .export-with-preview .export-session-input input{width:100%;max-width:420px;height:44px;min-height:44px;padding:9px 12px;font-size:16px;background:#fff;border-color:#aeb9c5}
+.export-workspace .export-with-preview .export-spatial-setting p{font-size:18px;line-height:1.5;font-weight:550;color:#303b48!important;margin:15px 0 0}
+.export-workspace .export-with-preview .export-download-section{display:block;min-width:0}
+.export-workspace .export-with-preview .export-download-section>h2{margin:0 0 16px}
+.export-workspace .export-with-preview .export-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch;gap:18px;flex:none}
+.export-workspace .export-with-preview .export-card{display:flex;flex-direction:column;align-items:stretch;min-width:0;gap:16px;padding:24px;background:#fff}
+.export-workspace .export-with-preview .export-format-heading{display:flex;align-items:center;gap:14px;min-height:42px}
+.export-workspace .export-with-preview .export-format-icon{width:42px;height:42px;display:grid;place-items:center;border-radius:8px;background:#fff0f2;color:#b10015;flex-shrink:0}
+.export-workspace .export-with-preview .export-card h3{font-size:18px;font-weight:650;line-height:1.4;color:#282d37}
+.export-workspace .export-with-preview .export-card p{max-width:54ch;font-size:16px;line-height:1.65;margin:0;color:#46515e!important}
+.export-workspace .export-with-preview .export-card-actions{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;width:100%;margin-top:auto;padding-top:18px;border-top:1px solid #e0e5eb}
+.export-workspace .export-with-preview .export-card-actions button{height:44px;min-height:44px;margin:0;padding:0 16px;font-size:14px;font-weight:550;border-color:#aeb9c5;color:#303b48;background:#fff}
+.export-workspace .export-with-preview .export-card-actions button:not(:disabled):hover{background:#fff3f4;color:#a90013;border-color:#d98790}
+.export-workspace .export-with-preview .export-card-actions button:disabled{color:#626e7b;opacity:.6}
+.export-workspace .export-with-preview .export-format-label{display:block;font-size:14px;line-height:1.5;color:#56616e;margin:0}
+.export-workspace .export-with-preview .export-inline-status{font-size:16px;line-height:1.6;color:#4c5967;margin:-10px 0 0;padding:0}
+.export-workspace .export-with-preview .export-detail-grid{display:grid;grid-template-columns:minmax(0,2.1fr) minmax(310px,1fr);gap:24px;align-items:start;min-width:0;min-height:0;flex:none;overflow:visible}
+.export-workspace .export-with-preview .export-preview-panel,.export-workspace .export-with-preview .export-coverage-panel{display:block;min-width:0;min-height:0;overflow:hidden;background:#fff}
+.export-workspace .export-with-preview .export-coverage-panel{position:sticky;top:24px;max-height:calc(100dvh - 48px);overflow-y:auto}
+.export-workspace .export-with-preview .export-panel-heading{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:21px 22px;border-bottom:1px solid #cfd7e0;background:#f3f6f9}
+.export-workspace .export-with-preview .export-panel-heading h2{font-size:20px;line-height:1.4}
+.export-workspace .export-with-preview .export-panel-heading h2 small{display:inline-block;font-size:14px;font-weight:400;letter-spacing:0;color:#56616e;margin-left:8px}
+.export-workspace .export-with-preview .export-panel-heading>span{font-size:14px;line-height:1.5;white-space:nowrap;color:#46515e;padding:4px 8px;border:1px solid #d4dce5;border-radius:5px;background:#fff}
+.export-workspace .export-with-preview .export-preview-filters{display:flex;align-items:flex-end;flex-wrap:wrap;gap:16px;padding:18px 22px;border-bottom:1px solid #d5dde6;background:#fff}
+.export-workspace .export-with-preview .export-preview-filters label{display:flex;flex-direction:column;align-items:flex-start;gap:8px;font-size:14px;line-height:1.5;color:#414b58;font-weight:550}
+.export-workspace .export-with-preview .export-preview-filters select{height:44px;min-height:44px;min-width:190px;max-width:290px;border:1px solid #aeb9c5;border-radius:5px;background:#fff;padding:8px 32px 8px 11px;font-size:14px;font-weight:400;color:#303b48}
+.export-workspace .export-with-preview .export-preview-filters>span{font-size:14px;line-height:1.6;color:#56616e;margin-left:auto;padding-bottom:10px}
+.export-workspace .export-with-preview .export-preview-scroll{height:auto;min-height:0;max-height:none;overflow-x:auto;overflow-y:visible;flex:none}
+.export-workspace .export-with-preview .export-preview-scroll:focus-visible{outline:3px solid #c90017;outline-offset:-3px}
+.export-workspace .export-with-preview .export-preview-scroll table{width:100%;min-width:640px;border-collapse:collapse;table-layout:fixed}
+.export-workspace .export-with-preview .export-preview-scroll th,.export-workspace .export-with-preview .export-preview-scroll td{font-size:14px;line-height:1.6;padding:16px 17px;height:auto;border-bottom:1px solid #dce3eb;vertical-align:top;text-align:left;white-space:normal;overflow-wrap:anywhere}
+.export-workspace .export-with-preview .export-preview-scroll thead th{position:static;font-size:14px;font-weight:600;color:#354151;background:#edf2f7;border-bottom:2px solid #c7d0db}
+.export-workspace .export-with-preview .export-preview-scroll th:first-child{width:31%}
+.export-workspace .export-with-preview .export-preview-scroll th:nth-child(2){width:18%}
+.export-workspace .export-with-preview .export-preview-scroll th:nth-child(3){width:23%}
+.export-workspace .export-with-preview .export-preview-scroll th:nth-child(4){width:28%}
+.export-workspace .export-with-preview .export-preview-scroll tbody th{font-weight:550;background:#fff;color:#303b48}
+.export-workspace .export-with-preview .export-preview-scroll tbody tr:nth-child(even) td,.export-workspace .export-with-preview .export-preview-scroll tbody tr:nth-child(even) th{background:#f8fafc}
+.export-workspace .export-with-preview .export-preview-scroll tbody tr:hover td,.export-workspace .export-with-preview .export-preview-scroll tbody tr:hover th{background:#f1f5f9}
+.export-workspace .export-with-preview .export-preview-scroll small{display:block;max-width:none;font-size:13px;line-height:1.6;font-weight:400;color:#586574;margin-top:5px;white-space:normal;overflow:visible;text-overflow:clip;overflow-wrap:anywhere}
+.export-workspace .export-with-preview .export-preview-value,.export-workspace .export-with-preview .export-preview-time{overflow:visible;white-space:normal;text-overflow:clip}
+.export-workspace .export-with-preview .export-preview-value strong{font-size:16px;font-weight:600;color:#283645}
+.export-workspace .export-with-preview .export-preview-time{color:#505d6c}
+.export-workspace .export-with-preview .export-value-state{display:inline-block;font-size:14px;line-height:1.6;color:#526170}
+.export-workspace .export-with-preview .export-value-state.has-value{color:#256247;font-weight:500}
+.export-workspace .export-with-preview .export-preview-empty{font-size:16px;line-height:1.6;color:#56616e;text-align:center;padding:34px 24px}
+.export-workspace .export-with-preview .export-coverage-content{padding:22px;min-height:0;max-height:none;overflow:visible}
+.export-workspace .export-with-preview .export-category-coverage{display:grid;gap:18px}
+.export-workspace .export-with-preview .export-category-coverage>div{display:flex;align-items:center;justify-content:space-between;gap:14px}
+.export-workspace .export-with-preview .export-category-coverage dt{flex:1;font-size:14px;line-height:1.55;color:#414c59}
+.export-workspace .export-with-preview .export-category-coverage dd{display:flex;align-items:center;gap:10px;flex-shrink:0;width:105px;margin:0}
+.export-workspace .export-with-preview .export-category-coverage strong{font-size:16px;line-height:1.4;min-width:42px;text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums;color:#303b48}
+.export-workspace .export-with-preview .export-category-coverage strong>span{font-size:14px;font-weight:400;color:#617080}
+.export-workspace .export-with-preview .export-coverage-track{display:block;height:7px;flex:1;border-radius:5px;background:#e0e6eb;overflow:hidden}
+.export-workspace .export-with-preview .export-coverage-track>span{display:block;height:100%;border-radius:inherit;background:#5b8272}
+.export-workspace .export-with-preview .export-coverage-note{font-size:14px;line-height:1.65;color:#536171;margin-top:22px;max-width:48ch}
+.export-workspace .export-with-preview .export-manifest{display:grid;gap:14px;margin-top:22px;padding-top:22px;border-top:1px solid #cfd8e2}
+.export-workspace .export-with-preview .export-manifest>div{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;font-size:14px;line-height:1.6}
+.export-workspace .export-with-preview .export-manifest dt{color:#4b5969}
+.export-workspace .export-with-preview .export-manifest dd{margin:0;font-size:16px;font-weight:550;color:#303b48;white-space:nowrap;font-variant-numeric:tabular-nums}
+.export-workspace .export-with-preview .export-source-error{font-size:14px;line-height:1.65;color:#4b5969;border-top:1px solid #cfd8e2;margin-top:22px;padding-top:20px}
+.export-workspace .export-with-preview .export-source-error details{margin-top:12px}
+.export-workspace .export-with-preview .export-source-error summary{min-height:40px;cursor:pointer;color:#39485b;line-height:1.5;padding:8px 0}
+.export-workspace .export-with-preview .export-source-error details>p{font-size:14px;line-height:1.65;overflow-wrap:anywhere;margin-top:4px}
+.export-workspace .export-with-preview .export-source-error button{font-size:14px;line-height:1.5;min-height:44px;height:auto;padding:10px 0;justify-content:flex-start;text-align:left;white-space:normal;color:#a60013}
+.export-workspace .export-with-preview .export-license{flex:none;max-width:100ch;font-size:14px;line-height:1.7;color:#56616e;margin:0;padding-top:20px;border-top:1px solid #cfd8e2}
+.export-workspace .export-with-preview .export-license a{color:#8e0011;text-decoration:underline;text-underline-offset:3px}
+.export-workspace .export-with-preview button:focus-visible,.export-workspace .export-with-preview input:focus-visible,.export-workspace .export-with-preview select:focus-visible,.export-workspace .export-with-preview summary:focus-visible{outline:3px solid #be0016;outline-offset:3px}
+@media(max-width:1250px){.export-workspace .export-with-preview .export-detail-grid{grid-template-columns:1fr}.export-workspace .export-with-preview .export-coverage-panel{position:static;max-height:none;overflow:visible;grid-row:1}.export-workspace .export-with-preview .export-coverage-content{display:grid;grid-template-columns:1fr 1fr;gap:20px 30px}.export-workspace .export-with-preview .export-category-coverage{grid-row:span 2}.export-workspace .export-with-preview .export-coverage-note{margin:0}.export-workspace .export-with-preview .export-manifest{margin:0;padding-top:16px}.export-workspace .export-with-preview .export-source-error{grid-column:1/-1;margin:0}.export-workspace .export-with-preview .export-selection{align-items:flex-start}}
+@media(max-width:900px){.workspace.export-workspace .page-content{padding:24px 20px 32px}.export-workspace .export-with-preview .export-card{padding:20px;gap:16px}.export-workspace .export-with-preview .export-info{gap:20px}.export-workspace .export-with-preview .export-format-heading{align-items:flex-start}.export-workspace .export-with-preview .export-selection-actions{width:100%}.export-workspace .export-with-preview .export-card-actions{align-items:flex-start;flex-direction:column}.export-workspace .export-with-preview .export-card-actions button{width:100%}.export-workspace .export-with-preview .export-panel-heading{padding:18px 20px}}
+@media(max-width:650px){.workspace.export-workspace .page-content{padding:22px 14px 30px}.workspace.export-workspace .page-heading h1{font-size:28px}.workspace.export-workspace .integration-timebar{padding:16px;gap:12px}.workspace.export-workspace .integration-timebar .timebar-note{flex-basis:100%}.export-workspace .compact-export.export-with-preview{gap:26px}.export-workspace .export-with-preview .export-grid{grid-template-columns:1fr;gap:16px}.export-workspace .export-with-preview .export-selection,.export-workspace .export-with-preview .export-info{padding:20px}.export-workspace .export-with-preview .export-selection-title{align-items:flex-start;flex-direction:column;gap:10px}.export-workspace .export-with-preview .export-selection-actions{display:grid;grid-template-columns:1fr;gap:10px}.export-workspace .export-with-preview .export-selection-actions>button{width:100%;justify-content:center}.export-workspace .export-with-preview .export-info{grid-template-columns:1fr}.export-workspace .export-with-preview .export-session-input input{max-width:none}.export-workspace .export-with-preview .export-spatial-setting p{margin-top:7px}.export-workspace .export-with-preview .export-format-heading{align-items:center}.export-workspace .export-with-preview .export-card-actions{flex-direction:row;align-items:center}.export-workspace .export-with-preview .export-card-actions button{width:auto}.export-workspace .export-with-preview .export-coverage-content{display:block;padding:20px}.export-workspace .export-with-preview .export-coverage-note{margin-top:20px}.export-workspace .export-with-preview .export-manifest,.export-workspace .export-with-preview .export-source-error{margin-top:20px}.export-workspace .export-with-preview .export-category-coverage dd{width:120px}.export-workspace .export-with-preview .export-panel-heading{align-items:flex-start;padding:18px 20px;gap:12px}.export-workspace .export-with-preview .export-panel-heading h2{font-size:19px}.export-workspace .export-with-preview .export-panel-heading h2 small{display:block;margin:4px 0 0}.export-workspace .export-with-preview .export-preview-filters{padding:18px 20px;gap:14px}.export-workspace .export-with-preview .export-preview-filters label{width:100%}.export-workspace .export-with-preview .export-preview-filters select{width:100%;max-width:none;font-size:16px}.export-workspace .export-with-preview .export-preview-filters>span{margin:0;padding:0}.export-workspace .export-with-preview .export-preview-scroll table{min-width:690px}.export-workspace .export-with-preview .export-preview-scroll th,.export-workspace .export-with-preview .export-preview-scroll td{padding:14px}.export-workspace .export-with-preview .export-license{font-size:14px}}
+@media(prefers-reduced-motion:reduce){.export-workspace .export-with-preview *{scroll-behavior:auto!important;transition:none!important}}

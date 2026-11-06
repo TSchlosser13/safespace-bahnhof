@@ -1,0 +1,129 @@
+.startup-screen{
+ min-height:100vh;min-height:100dvh;display:grid;place-items:center;
+ padding:40px 32px;background:#fff;color:#282d37;overflow-x:clip;
+}
+.startup-welcome{width:min(1120px,100%);min-width:0;margin:auto;--train-width:150px}
+.startup-composition{
+ display:grid;grid-template-areas:"left heading right";
+ grid-template-columns:240px minmax(0,1fr) 240px;gap:28px;align-items:end;min-height:192px;
+}
+.startup-heading{
+ grid-area:heading;align-self:center;display:flex;justify-content:center;align-items:center;
+ gap:24px;min-width:0;padding-bottom:20px;
+}
+.startup-brand{display:flex;align-items:center;gap:12px;flex-shrink:0;font-size:22px;font-weight:650;line-height:1.12;letter-spacing:-.4px;user-select:none}
+.startup-brand-icon{width:48px;height:48px;display:grid;place-items:center;background:#ec0016;color:#fff;border-radius:10px}
+.startup-brand-icon>svg{width:35px;height:35px}
+.startup-brand strong{display:block;font-size:22px;font-weight:400;letter-spacing:-.4px}
+.startup-welcome-copy{padding:2px 0 2px 24px;border-left:1px solid #e4e8e5;min-width:0}
+.startup-eyebrow{display:block;font-size:11px;line-height:1.5;font-weight:550;letter-spacing:.13em;text-transform:uppercase;color:#68726e;margin-bottom:10px}
+.startup-welcome h1{font-size:clamp(32px,2.8vw,38px);line-height:1.13;letter-spacing:-1px;font-weight:620;margin:0}
+.startup-title-line{display:block;white-space:nowrap}
+/* The illustrations share a platform baseline and stay still from first paint. */
+.startup-shapes{display:flex;align-items:flex-end;justify-content:center;position:relative;min-width:0;pointer-events:none}
+.startup-shapes-left{grid-area:left}
+.startup-shapes-right{grid-area:right}
+.startup-station-object{display:block;width:100%;max-width:240px;height:auto;overflow:visible}
+.startup-journey{position:relative;height:104px;width:min(600px,100%);margin-inline:auto}
+.startup-rail-row{position:absolute;left:0;right:0;bottom:24px;display:flex;align-items:center;gap:16px}
+.startup-route{position:relative;flex:1;min-width:0}
+/* Only this fixed track's colour changes with loading; its geometry never moves. */
+.startup-track{
+ height:14px;border:0;border-radius:0;
+ background:linear-gradient(to right,#bd3444 0 var(--loaded),#c8cfce var(--loaded) 100%);
+ mask-image:linear-gradient(#000,#000),linear-gradient(#000,#000),repeating-linear-gradient(to right,transparent 0 12px,#000 12px 14px,transparent 14px 22px);
+ mask-size:100% 2px,100% 2px,100% 100%;mask-position:0 3px,0 calc(100% - 3px),0 0;mask-repeat:no-repeat;overflow:hidden;
+}
+.startup-track>[data-slot=progress-indicator]{display:none}
+.startup-train-run{
+ position:absolute;left:0;right:var(--train-width);bottom:calc(100% - 6px);height:0;
+ animation:startup-train-travel 16s cubic-bezier(.3,0,.7,1) infinite alternate;will-change:transform;
+}
+.startup-train{position:absolute;bottom:0;left:0;width:var(--train-width)}
+.startup-train-object{display:block;width:100%;height:auto;overflow:visible}
+.startup-train-wheel{transform-box:fill-box;transform-origin:center;animation:startup-wheel-turn 16s cubic-bezier(.3,0,.7,1) infinite alternate}
+/* One animation clock survives hydration, progress, completion and retry. */
+@keyframes startup-train-travel{from{transform:translate3d(0,0,0)}to{transform:translate3d(100%,0,0)}}
+@keyframes startup-wheel-turn{from{transform:rotate(0)}to{transform:rotate(7200deg)}}
+.startup-percentage{display:flex;align-items:baseline;gap:3px;min-width:44px;color:#58635f;font-size:18px;font-weight:500;font-variant-numeric:tabular-nums;line-height:1;letter-spacing:-.3px}
+.startup-percentage>small{font-size:11px;font-weight:400;color:#68726e;letter-spacing:0}
+.startup-loading-controls{margin:0 auto;width:min(560px,100%);text-align:center}
+.startup-status{display:flex;align-items:center;justify-content:center;min-height:24px;font-size:13px;line-height:20px;color:#626c69;margin:0;overflow-wrap:anywhere}
+.startup-actions{display:flex;justify-content:center;margin-top:16px}
+.startup-enter,.startup-retry{height:46px;padding:0 22px;font-size:14px;gap:18px;box-shadow:none}
+.startup-enter{width:232px;max-width:100%;border:1px solid transparent}
+.startup-enter:disabled{opacity:1;background:#f2f4f3;color:#737e78;border:1px solid #dfe5e1}
+.startup-enter:focus-visible,.startup-retry:focus-visible{outline:2px solid #a51e31;outline-offset:4px;box-shadow:none}
+.startup-screen[data-state=ready] .startup-status{color:#48544e}
+.startup-recovery{display:flex;flex-direction:column;align-items:center;gap:12px;margin-top:18px}
+.startup-error{font-size:13px;line-height:20px;color:#a31629;overflow-wrap:anywhere;margin:0;max-width:480px}
+.startup-retry{height:44px;gap:10px;background:#fff;border-color:#d6ded8;color:#425249}
+@media(max-width:1120px){
+ .startup-composition{grid-template-columns:clamp(180px,20vw,224px) minmax(0,1fr) clamp(180px,20vw,224px);gap:24px}
+ .startup-heading{gap:20px}.startup-welcome-copy{padding-left:20px}
+ .startup-welcome h1{font-size:34px}
+}
+@media(max-width:1000px){
+ .startup-welcome{--train-width:130px}
+ .startup-composition{grid-template-columns:clamp(136px,18vw,180px) minmax(0,1fr) clamp(136px,18vw,180px);gap:20px;min-height:160px}
+ .startup-heading{padding-bottom:12px}
+ .startup-brand,.startup-brand strong{font-size:20px}.startup-brand{gap:10px}
+ .startup-brand-icon{width:44px;height:44px}.startup-brand-icon>svg{width:32px;height:32px}
+ .startup-welcome h1{font-size:30px}.startup-journey{width:min(580px,100%)}
+}
+@media(min-width:701px) and (max-width:860px){
+ .startup-heading{gap:14px}.startup-welcome-copy{padding-left:14px}
+ .startup-brand,.startup-brand strong{font-size:18px}.startup-brand{gap:8px}
+ .startup-brand-icon{width:40px;height:40px}.startup-brand-icon>svg{width:29px;height:29px}
+ .startup-welcome h1{font-size:28px}
+}
+@media(max-width:700px){
+ .startup-screen{padding:28px 22px}
+ .startup-welcome{--train-width:clamp(92px,25vw,130px)}
+ .startup-composition{grid-template-areas:"heading heading" "left right";grid-template-columns:repeat(2,minmax(0,1fr));column-gap:24px;row-gap:24px;min-height:0}
+ .startup-heading{padding-bottom:0;gap:20px}.startup-welcome-copy{padding-left:20px}
+ .startup-station-object{max-width:180px}.startup-station-detail{display:none}
+ .startup-welcome h1{font-size:28px;letter-spacing:-.6px}
+ .startup-eyebrow{font-size:11px;letter-spacing:.1em;margin-bottom:8px}
+ .startup-journey{height:90px;width:min(420px,92%)}
+ .startup-rail-row{gap:14px}.startup-percentage{min-width:44px;font-size:17px}
+}
+@media(max-width:440px){
+ .startup-screen{padding:24px 20px}
+ .startup-heading{gap:16px}.startup-welcome-copy{padding-left:16px}
+ .startup-brand,.startup-brand strong{font-size:18px}.startup-brand{gap:8px}
+ .startup-brand-icon{width:38px;height:38px}.startup-brand-icon>svg{width:28px;height:28px}
+ .startup-welcome h1{font-size:25px}
+}
+@media(max-width:360px){
+ .startup-screen{padding-inline:16px}
+ .startup-composition{column-gap:18px;row-gap:20px}
+ .startup-heading{gap:12px}.startup-welcome-copy{padding-left:12px}
+ .startup-brand,.startup-brand strong{font-size:16px}.startup-brand{gap:7px}
+ .startup-brand-icon{width:32px;height:32px}.startup-brand-icon>svg{width:24px;height:24px}
+ .startup-welcome h1{font-size:23px}.startup-eyebrow{letter-spacing:.06em}
+}
+@media(max-height:620px) and (min-width:701px){
+ .startup-screen{padding-block:24px}.startup-composition{min-height:0}
+ .startup-heading{padding-bottom:10px}.startup-journey{height:96px}
+ .startup-actions{margin-top:12px}
+}
+@media(max-height:430px) and (min-width:701px){
+ .startup-screen{padding-block:18px}.startup-journey{height:80px}
+ .startup-heading{padding-bottom:0}.startup-rail-row{bottom:20px}
+ .startup-enter{height:44px}.startup-actions{margin-top:10px}
+}
+@media(max-height:500px) and (max-width:700px){
+ .startup-screen{padding-block:16px}
+ .startup-composition{row-gap:12px}.startup-station-object{max-width:126px}
+ .startup-heading{gap:12px}.startup-welcome-copy{padding-left:12px}
+ .startup-brand,.startup-brand strong{font-size:16px}.startup-brand{gap:7px}
+ .startup-brand-icon{width:32px;height:32px}.startup-brand-icon>svg{width:24px;height:24px}
+ .startup-welcome h1{font-size:23px}.startup-journey{height:68px}
+ .startup-rail-row{bottom:20px}.startup-actions{margin-top:12px}.startup-enter{height:44px}
+ .startup-recovery{margin-top:14px}
+}
+@media(prefers-reduced-motion:reduce){
+ .startup-screen *,.startup-screen *:before,.startup-screen *:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+ .startup-train-run{transform:translate3d(50%,0,0);will-change:auto}.startup-train-wheel{transform:none}
+}

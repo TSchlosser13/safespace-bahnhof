@@ -1,0 +1,45 @@
+.overview-workspace .filter-bar {
+  --station-filter-width: 180px;
+  grid-template-columns: minmax(150px, 1fr) repeat(4, var(--station-filter-width)) 34px;
+}
+.overview-workspace .filter-bar > .search-wrap,
+.overview-workspace .filter-bar [data-slot=select-trigger],
+.overview-workspace .filter-bar .station-category-trigger,
+.overview-workspace .filter-bar > button:last-child {
+  grid-row: auto;
+  grid-column: auto;
+}
+.overview-workspace .filter-bar [data-slot=select-trigger],
+.overview-workspace .filter-bar .station-category-trigger {
+  width: 100%;
+  height: 34px;
+  min-width: 0;
+  padding: 0 9px;
+  font-size: 13px;
+  font-weight: 400;
+  gap: 4px;
+}
+@media (min-width: 1020px) and (max-width: 1199px) {
+  .overview-workspace .filter-bar {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) 34px;
+  }
+  .overview-workspace .filter-bar > .search-wrap { grid-column: 1 / 5; }
+  .overview-workspace .filter-bar [data-slot=select-trigger],
+  .overview-workspace .filter-bar .station-category-trigger { grid-row: 2; grid-column: auto; }
+  .overview-workspace .filter-bar > button:last-child { grid-column: 5; grid-row: 1; }
+}
+@media (max-width: 1019px) {
+  .overview-workspace .filter-bar { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .overview-workspace .filter-bar > .search-wrap { grid-row: 1; grid-column: 1 / -1; margin-right: 41px; }
+  .overview-workspace .filter-bar [aria-label=Bundesland] { grid-row: 2; grid-column: 1; }
+  .overview-workspace .filter-bar .station-category-trigger { grid-row: 2; grid-column: 2; }
+  .overview-workspace .filter-bar [aria-label=Datenabdeckung] { grid-row: 3; grid-column: 1; }
+  .overview-workspace .filter-bar [aria-label=Stationsauswahl] { grid-row: 3; grid-column: 2; }
+  .overview-workspace .filter-bar > button:last-child { grid-column: 2; grid-row: 1; justify-self: end; }
+}
+@media (max-width: 399px) {
+  .overview-workspace .filter-bar [aria-label=Bundesland] { grid-column: 1 / -1; }
+  .overview-workspace .filter-bar .station-category-trigger { grid-row: 3; grid-column: 1 / -1; }
+  .overview-workspace .filter-bar [aria-label=Datenabdeckung] { grid-row: 4; grid-column: 1 / -1; }
+  .overview-workspace .filter-bar [aria-label=Stationsauswahl] { grid-row: 5; grid-column: 1 / -1; }
+}

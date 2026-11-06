@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "source-retention-policy/1.2",
+  "liveFacilities": {
+    "authorizedAt": "2026-09-25",
+    "scope": "OpenStation SIRI FM current facility-status observations",
+    "rule": "Retain and display the latest explicitly retrieved SIRI snapshot separately from historical analysis. Preserve source and retrieval timestamps; never use current status as evidence for the historical analysis date. Refresh only on explicit request, not on a background schedule.",
+    "directory": ".data/retrieval/openstation-live",
+    "preparedPath": "public/data/integration/siri-live.json"
+  },
+  "years": [
+    2024,
+    2025,
+    2026
+  ],
+  "startDate": "2024-01-01",
+  "endDate": "2026-08-31",
+  "dateBasis": "Native observation timestamps, inclusive; timetable departures follow their separate August-only civil-date range. Reference snapshots use the latest available release regardless of reference year. Download, check and processing dates are provenance, not observations.",
+  "appliedAt": "2026-09-23",
+  "currentMapException": {
+    "scope": [
+      "station_catalogue",
+      "cartographic_locations",
+      "osm",
+      "bkg"
+    ],
+    "rule": "Use the latest available maps, station directory and static infrastructure inventories, even after the analysis cutoff. Preserve actual publication/capture dates; these snapshots do not reconstruct past conditions. Facility-status observations are not covered by this exception."
+  },
+  "timetable": {
+    "startDate": "2026-08-01",
+    "endDate": "2026-08-31",
+    "dateBasis": "Departure instants from 1 through 31 August 2026 in Europe/Berlin. Earlier GTFS service-day identifiers may be retained only as necessary calendar support for overnight departures inside August; they do not permit July departures or query windows.",
+    "timezone": "Europe/Berlin"
+  },
+  "latestReferenceSnapshots": {
+    "scope": [
+      "station_catalogue",
+      "cartographic_locations",
+      "stop_directory",
+      "osm",
+      "bkg",
+      "zensus",
+      "station_plans"
+    ],
+    "rule": "Use the latest available release of reference datasets. Preserve and display the actual reference, capture and publication dates, including dates before 2024 or after August 2026. A snapshot is not an observation time series and does not reconstruct historical conditions. Historical facility operating status and weather remain subject to the observation range; the separate liveFacilities rule governs explicitly requested current SIRI snapshots."
+  },
+  "operationalArchive": {
+    "startDate": "2026-08-01",
+    "endDate": "2026-08-31",
+    "timezone": "Europe/Berlin",
+    "dateBasis": "Eligible native arrival/departure records within August only; reported changed times are not verified actual event times."
+  }
+}

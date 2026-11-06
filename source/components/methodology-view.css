@@ -1,0 +1,197 @@
+/* Reading layout scoped to the methodology page, including its shared source components. */
+.workspace.methodology-workspace .page-content { max-width: 1560px; padding: 28px clamp(20px,3vw,42px) 40px; }
+.workspace.methodology-workspace .page-heading { margin-bottom: 28px; }
+.workspace.methodology-workspace .page-heading h1 { font-size: 32px; line-height: 1.25; }
+.workspace.methodology-workspace .page-heading p:not(.eyebrow) { font-size: 16px; line-height: 1.6; }
+.workspace.methodology-workspace .page-heading button { min-height: 44px; }
+.methodology-page { display: block; min-width: 0; color: #282d37; font-size: 16px; line-height: 1.65; }
+.methodology-page :is(a,button,summary,input,[tabindex="0"]):focus-visible { outline: 3px solid #b80016; outline-offset: 3px; }
+.methodology-page a { text-underline-offset: 3px; }
+.methodology-page .text-link { font-size: 14px; min-height: 44px; text-decoration: underline; }
+.methodology-page .methodology-navigation { padding: 20px; border: 1px solid #c9d0d8; border-radius: 10px; background: #f3f6f9; scroll-margin-top: 24px; }
+.methodology-page .methodology-navigation > span { display: block; margin-bottom: 12px; color: #4b5663; font-size: 14px; font-weight: 550; }
+.methodology-page .methodology-navigation ol { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 12px; margin: 0; padding: 0; list-style: none; }
+.methodology-page .methodology-navigation li { min-width: 0; }
+.methodology-page .methodology-navigation a { display: flex; align-items: center; gap: 10px; height: 100%; min-height: 52px; padding: 12px; border: 1px solid #c9d0d8; border-radius: 6px; background: #fff; color: #282d37; font-size: 14px; font-weight: 600; line-height: 1.4; text-decoration: none; }
+.methodology-page .methodology-navigation a > span { color: #a60013; font-size: 13px; font-variant-numeric: tabular-nums; font-weight: 600; }
+.methodology-page .methodology-navigation a:hover { background: #fff3f4; border-color: #d98790; }
+.methodology-page .methodology-section { min-width: 0; padding-top: 34px; }
+.methodology-page .methodology-section + .methodology-section { margin-top: 52px; padding-top: 34px; border-top: 2px solid #b8c2cd; }
+.methodology-page .methodology-section-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; margin-bottom: 26px; }
+.methodology-page .methodology-section-heading { display: flex; gap: 16px; align-items: flex-start; min-width: 0; }
+.methodology-page .methodology-section-number { display: grid; place-items: center; flex: none; width: 42px; height: 42px; border-radius: 7px; background: #fff0f2; color: #a60013; font-size: 15px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.methodology-page .methodology-section-title { margin: 0; padding: 0; border: 0; font-size: 25px; line-height: 1.4; letter-spacing: -.3px; scroll-margin-top: 28px; }
+.methodology-page .methodology-section-header p { margin-top: 7px; color: #4b5663; font-size: 16px; line-height: 1.65; }
+.methodology-page .methodology-back-link { flex: none; display: inline-flex; align-items: center; gap: 7px; min-height: 44px; color: #535e6c; font-size: 14px; text-decoration: underline; }
+.methodology-page .retrieval-overview { gap: 26px; }
+.methodology-page .retrieval-summary { border: 1px solid #c9d0d8; border-top: 3px solid #ec0016; border-radius: 10px; overflow: hidden; background: #fff; }
+.methodology-page .retrieval-summary > div { padding: 22px 24px; }
+.methodology-page .retrieval-summary span { color: #4b5663; font-size: 14px; }
+.methodology-page .retrieval-summary strong { margin: 6px 0; font-size: clamp(24px,2.5vw,32px); }
+.methodology-page .retrieval-summary p { font-size: 14px; line-height: 1.6; color: #535e6c; }
+.methodology-page .source-inventory-intro { gap: 20px; font-size: 16px; }
+.methodology-page .source-inventory-intro > p { max-width: 85ch; }
+.methodology-page .source-periods { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 22px; padding: 0; margin: 0; }
+.methodology-page .source-periods > div { border-left: 3px solid #c9d0d8; padding-left: 16px; }
+.methodology-page .source-periods dt { font-size: 14px; color: #535e6c; }
+.methodology-page .source-periods dd { margin: 5px 0 0; font-size: 15px; font-weight: 550; color: #282d37; }
+.methodology-page .source-inventory-notes { display: flex; align-items: flex-start; gap: 12px 24px; margin: 0; font-size: 14px; border-top: 1px solid #d5dde6; padding-top: 14px; }
+.methodology-page .source-inventory-notes > details { min-width: 0; flex: 1 1 340px; }
+.methodology-page .source-inventory-notes summary { padding: 10px 0; min-height: 44px; color: #384453; font-size: 14px; font-weight: 550; }
+.methodology-page .source-inventory-note-body { gap: 16px; max-width: 85ch; padding: 16px 0; font-size: 16px; line-height: 1.7; }
+.methodology-page .source-overview-wrap { overflow: hidden; border: 1px solid #c9d0d8; border-radius: 10px; }
+.methodology-page .source-inventory-table { min-width: 0; width: 100%; table-layout: fixed; }
+.methodology-page .source-inventory-table caption { padding: 22px 24px; font-size: 19px; line-height: 1.4; background: #fff; }
+.methodology-page .source-inventory-table caption span { margin-top: 6px; font-size: 14px; color: #535e6c; }
+.methodology-page .source-inventory-table > thead > tr > th { padding: 14px 18px; height: auto; background: #edf2f7; color: #354151; font-size: 14px; font-weight: 600; border-bottom: 2px solid #c7d0db; }
+.methodology-page .source-inventory-table > tbody > .source-inventory-row > :is(th,td) { width: auto; min-width: 0; padding: 20px 18px; background: #fff; border-bottom: 1px solid #dce3eb; vertical-align: middle; font-size: 14px; line-height: 1.6; color: #414c59; overflow-wrap: anywhere; }
+.methodology-page .source-inventory-row:nth-of-type(4n+3) > :is(th,td) { background: #f8fafc; }
+.methodology-page .source-inventory-row:has([aria-expanded="true"]) > :is(th,td) { background: #edf2f7; }
+.methodology-page .source-inventory-name { display: block; font-size: 16px; line-height: 1.5; font-weight: 600; color: #282d37; }
+.methodology-page .source-inventory-use { display: block; margin-top: 6px; color: #535e6c; font-size: 14px; line-height: 1.6; font-weight: 400; }
+.methodology-page .source-inventory-table .freshness-reference { display: block; color: #414c59; font-size: 14px; font-weight: 400; line-height: 1.65; }
+.methodology-page .source-mobile-label { display: none; }
+.methodology-page .retrieval-status { padding: 5px 8px; font-size: 13px; line-height: 1.5; white-space: normal; }
+.methodology-page .source-inventory-toggle { display: flex; align-items: center; justify-content: center; gap: 7px; min-height: 44px; width: 100%; padding: 8px 10px; border: 1px solid #aeb9c5; border-radius: 5px; color: #384453; background: #fff; font-size: 14px; line-height: 1.5; font-weight: 550; cursor: pointer; }
+.methodology-page .source-inventory-toggle:hover { background: #fff3f4; border-color: #d98790; color: #a60013; }
+.methodology-page .source-inventory-toggle svg { flex: none; }
+.methodology-page .source-inventory-toggle[aria-expanded="true"] svg { transform: rotate(180deg); }
+.methodology-page .source-inventory-detail-row[hidden] { display: none; }
+.methodology-page .source-inventory-table > tbody > .source-inventory-detail-row > td { padding: 0; width: auto; min-width: 0; }
+.methodology-page .source-inventory-table .retrieval-source-body { padding: 28px; background: #f8fafc; border: 0; border-left: 3px solid #ec0016; gap: 28px; font-size: 16px; line-height: 1.7; }
+.methodology-page .retrieval-source-body > * { min-width: 0; }
+.methodology-page .retrieval-source-body h3 { margin: 0 0 12px; font-size: 18px; line-height: 1.5; color: #282d37; }
+.methodology-page .retrieval-source-body p { max-width: 90ch; }
+.methodology-page .retrieval-source-body p + p { margin-top: 12px; }
+.methodology-page .source-reading-guide { display: grid; gap: 20px; margin: 0; }
+.methodology-page .source-reading-guide > div { display: grid; grid-template-columns: 140px minmax(0,1fr); gap: 20px; }
+.methodology-page .source-reading-guide dt { font-size: 14px; font-weight: 600; color: #414c59; }
+.methodology-page .source-reading-guide dd { margin: 0; max-width: 80ch; }
+.methodology-page .source-storage { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 20px; margin: 0; padding: 20px; background: #fff; border: 1px solid #d5dde6; border-radius: 6px; }
+.methodology-page .source-storage dt { font-size: 14px; color: #535e6c; }
+.methodology-page .source-storage dd { margin: 5px 0 0; font-size: 16px; font-weight: 600; color: #282d37; font-variant-numeric: tabular-nums; }
+.methodology-page .source-storage small { font-size: 14px; font-weight: 400; }
+.methodology-page .source-freshness { background: #fff; padding: 24px; border: 1px solid #d5dde6; border-radius: 6px; margin: 0; }
+.methodology-page .source-freshness ul { margin: 16px 0; font-size: 16px; line-height: 1.7; }
+.methodology-page .source-freshness li + li { margin-top: 10px; }
+.methodology-page .source-processing { padding-top: 26px; border-top: 1px solid #c9d0d8; }
+.methodology-page .retrieval-source-body .retrieval-table-wrap { margin-top: 20px; border: 1px solid #c9d0d8; border-radius: 6px; background: #fff; }
+.methodology-page .retrieval-datasets { font-size: 14px; line-height: 1.65; }
+.methodology-page .retrieval-datasets :is(th,td) { padding: 14px 16px; font-size: 14px; color: #414c59; vertical-align: top; border-bottom: 1px solid #dce3eb; }
+.methodology-page .retrieval-datasets th { height: auto; background: #edf2f7; font-weight: 600; }
+.methodology-page .retrieval-datasets td:last-child { font-size: 14px; }
+.methodology-page .retrieval-datasets small { max-width: none; color: #535e6c; font-size: 14px; }
+.methodology-page .retrieval-gaps { padding: 20px 24px; background: #fff; border: 1px solid #d5dde6; border-radius: 6px; }
+.methodology-page .retrieval-gaps li + li { margin-top: 10px; }
+.methodology-page .retrieval-definition { grid-template-columns: 110px minmax(0,1fr); gap: 16px 24px; border-top: 1px solid #c9d0d8; padding-top: 24px; }
+.methodology-page .retrieval-definition dt { font-size: 14px; font-weight: 600; color: #414c59; }
+.methodology-page .retrieval-links { border-top: 1px solid #c9d0d8; padding-top: 16px; }
+.methodology-page .retrieval-links a { overflow-wrap: anywhere; }
+.methodology-page .research-sources > p, .methodology-page .methodology-intro { max-width: 85ch; font-size: 16px; line-height: 1.7; color: #4b5663; }
+.methodology-page .research-sources > p + p { margin-top: 16px; }
+.methodology-page .research-source { margin: 26px 0 0; padding: 28px; border: 1px solid #c9d0d8; border-radius: 10px; background: #fff; font-size: 16px; line-height: 1.7; }
+.methodology-page .research-source > h3 { font-size: 20px; margin: 0 0 14px; padding-bottom: 16px; border-bottom: 1px solid #cfd7e0; line-height: 1.4; }
+.methodology-page .research-source > p { max-width: 90ch; margin: 14px 0; }
+.methodology-page .research-source > p:nth-of-type(2) { font-size: 14px; color: #535e6c; }
+.methodology-page .research-source details { padding: 0; margin: 16px 0 0; border: 1px solid #c9d0d8; border-radius: 6px; background: #fff; }
+.methodology-page .research-source summary { padding: 16px 18px; min-height: 52px; font-size: 16px; line-height: 1.6; background: #f3f6f9; }
+.methodology-page .research-source summary:hover { background: #edf2f7; }
+.methodology-page .research-source summary small { font-size: 14px; color: #535e6c; }
+.methodology-page .research-source details > :not(summary) { margin: 18px; }
+.methodology-page .research-source details > p { max-width: 85ch; font-size: 16px; }
+.methodology-page .research-source .research-date { font-size: 14px; }
+.methodology-page .research-source .research-table-controls { gap: 14px; }
+.methodology-page .research-source :is(input,button) { min-height: 44px; height: auto; padding: 10px 12px; font-size: 14px; }
+.methodology-page .research-source .research-table-controls span { font-size: 14px; }
+.methodology-page .research-source .research-table { max-height: 560px; width: auto; max-width: calc(100% - 36px); }
+.methodology-page .research-source .research-table :is(th,td) { font-size: 14px; line-height: 1.65; padding: 13px 16px; color: #414c59; text-overflow: clip; }
+.methodology-page .research-table caption { padding: 14px 16px; font-size: 14px; color: #414c59; }
+.methodology-page .research-pagination { font-size: 14px; gap: 16px; }
+.methodology-page .research-source pre { font-size: 14px; line-height: 1.65; padding: 16px; background: #f3f6f9; }
+.methodology-page .research-limits ul { font-size: 16px; line-height: 1.7; }
+.methodology-page .research-limits li + li { margin-top: 12px; }
+.methodology-page .methodology-intro { margin: 0 0 28px; }
+.methodology-page .methodology-indicator-groups { display: grid; gap: 24px; }
+.methodology-page .methodology-indicator-group { min-width: 0; border: 1px solid #c9d0d8; border-radius: 10px; background: #fff; overflow: hidden; }
+.methodology-page .methodology-group-heading { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px 18px; }
+.methodology-page .methodology-indicator-group > .methodology-group-heading { padding: 20px 24px; background: #edf2f7; border-bottom: 1px solid #c7d0db; }
+.methodology-page .methodology-group-heading h3 { font-size: 18px; line-height: 1.5; }
+.methodology-page .methodology-group-heading > span { color: #535e6c; font-size: 14px; }
+.methodology-page .methodology-catalogue .method-detail { margin: 0; padding: 0; border: 0; border-bottom: 1px solid #dce3eb; border-radius: 0; background: #fff; }
+.methodology-page .methodology-catalogue .method-detail:last-child { border-bottom: 0; }
+.methodology-page .methodology-catalogue .method-detail summary { padding: 20px 24px; gap: 20px; min-height: 64px; font-size: 16px; line-height: 1.6; }
+.methodology-page .method-detail summary:hover { background: #f8fafc; }
+.methodology-page .method-detail summary > span:first-child { min-width: 0; }
+.methodology-page .method-detail summary small { margin-top: 4px; font-size: 14px; color: #535e6c; }
+.methodology-page .method-detail .method-version { flex: none; font-size: 13px; color: #535e6c; }
+.methodology-page .methodology-catalogue .method-detail > .provenance-list { margin: 0; padding: 22px 24px; background: #f8fafc; border-top: 1px solid #dce3eb; }
+.methodology-page .provenance-list > div { padding: 10px 0; }
+.methodology-page .provenance-list dt { font-size: 14px; color: #535e6c; margin-bottom: 5px; }
+.methodology-page .provenance-list dd { font-size: 16px; line-height: 1.7; overflow-wrap: anywhere; }
+.methodology-page .methodology-interpretation { margin-top: 30px; padding: 26px; border: 1px solid #c9d0d8; border-radius: 10px; background: #f3f6f9; }
+.methodology-page .methodology-interpretation h3 { font-size: 18px; }
+.methodology-page .methodology-interpretation ul { display: grid; grid-template-columns: 1fr 1fr; column-gap: 40px; row-gap: 20px; margin: 20px 0 0; padding-left: 20px; list-style: disc; color: #414c59; font-size: 16px; line-height: 1.7; }
+.methodology-page .history-panel { min-width: 0; padding: 26px; border: 1px solid #c9d0d8; border-radius: 10px; background: #fff; }
+.methodology-page .history-panel > .methodology-group-heading { margin-bottom: 20px; }
+.methodology-page .history-row { padding: 24px 0; border-top: 1px solid #dce3eb; border-bottom: 0; gap: 16px; font-size: 16px; }
+.methodology-page .history-row > svg { margin-top: 4px; }
+.methodology-page .history-row p { font-size: 14px; line-height: 1.65; }
+.methodology-page .history-row code { display: block; font-size: 13px; padding: 12px; color: #535e6c; background: #f3f6f9; border-radius: 5px; }
+.methodology-page .history-row summary { min-height: 44px; padding: 10px 0; font-size: 14px; color: #414c59; cursor: pointer; }
+.methodology-page .history-row pre { font-size: 14px; line-height: 1.65; }
+.methodology-page .history-row > .status { font-size: 13px; padding: 5px 8px; }
+.methodology-page .history-panel > .panel-footnote { padding: 20px 0 0; border-top: 1px solid #dce3eb; font-size: 14px; line-height: 1.7; }
+@media (max-width: 1150px) {
+ .methodology-page .methodology-navigation ol { grid-template-columns: repeat(2,minmax(0,1fr)); }
+ .methodology-page .source-inventory-table > tbody > .source-inventory-row > :is(th,td) { padding: 18px 12px; }
+ .methodology-page .source-inventory-toggle { gap: 4px; padding: 8px 6px; font-size: 13px; }
+}
+@media (max-width: 800px) {
+ .methodology-page .methodology-section-header { flex-wrap: wrap; gap: 8px; }
+ .methodology-page .methodology-back-link { margin-left: 58px; }
+ .methodology-page .retrieval-summary, .methodology-page .source-periods, .methodology-page .source-storage { grid-template-columns: 1fr; }
+ .methodology-page .retrieval-summary > div { border-right: 0; border-bottom: 1px solid #d5dde6; padding: 20px 24px; }
+ .methodology-page .retrieval-summary > div:last-child { border-bottom: 0; }
+ .methodology-page .source-inventory-table colgroup { display: none; }
+ .methodology-page .source-inventory-table > thead { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; }
+ .methodology-page .source-inventory-table > tbody { display: block; }
+ .methodology-page .source-inventory-table .source-inventory-row { display: grid; grid-template-columns: 1fr auto; gap: 14px; padding: 22px; border-bottom: 1px solid #c9d0d8; }
+ .methodology-page .source-inventory-row:nth-of-type(4n+3) { background: #f8fafc; }
+ .methodology-page .source-inventory-row:has([aria-expanded="true"]) { background: #edf2f7; }
+ .methodology-page .source-inventory-table > tbody > .source-inventory-row > :is(th,td) { display: block; padding: 0; border: 0; background: transparent; }
+ .methodology-page .source-inventory-row > th, .methodology-page .source-inventory-dates { grid-column: 1 / -1; }
+ .methodology-page .source-mobile-label { display: block; margin-bottom: 4px; color: #535e6c; font-size: 13px; font-weight: 600; }
+ .methodology-page .source-inventory-toggle { min-width: 118px; font-size: 14px; }
+ .methodology-page .source-inventory-table .source-inventory-detail-row:not([hidden]), .methodology-page .source-inventory-detail-row > td { display: block; }
+ .methodology-page .source-inventory-table .retrieval-source-body { padding: 22px; }
+ .methodology-page .source-reading-guide > div { grid-template-columns: 1fr; gap: 6px; }
+ .methodology-page .source-freshness, .methodology-page .retrieval-gaps { padding: 18px; }
+ .methodology-page .retrieval-definition { grid-template-columns: 1fr; gap: 5px; }
+ .methodology-page .retrieval-definition dd { margin-bottom: 14px; }
+ .methodology-page .methodology-interpretation ul { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+ .workspace.methodology-workspace .page-content { padding: 22px 14px 30px; }
+ .workspace.methodology-workspace .page-heading h1 { font-size: 28px; }
+ .methodology-page .methodology-navigation { padding: 16px; }
+ .methodology-page .methodology-navigation ol { grid-template-columns: 1fr; gap: 10px; }
+ .methodology-page .methodology-section + .methodology-section { margin-top: 38px; padding-top: 28px; }
+ .methodology-page .methodology-section-title { font-size: 23px; }
+ .methodology-page .methodology-section-header p { font-size: 15px; }
+ .methodology-page .methodology-section-heading { gap: 12px; }
+ .methodology-page .methodology-section-number { width: 36px; height: 36px; font-size: 14px; }
+ .methodology-page .methodology-back-link { margin-left: 48px; }
+ .methodology-page .research-source { padding: 20px; }
+ .methodology-page .research-source summary { padding: 16px; }
+ .methodology-page .research-source summary small { display: block; margin: 6px 0 0; }
+ .methodology-page .research-source details > :not(summary) { margin: 16px; }
+ .methodology-page .research-source .research-table { max-width: calc(100% - 32px); }
+ .methodology-page .research-source input { font-size: 16px; }
+ .methodology-page .methodology-indicator-group > .methodology-group-heading, .methodology-page .methodology-catalogue .method-detail summary, .methodology-page .methodology-catalogue .method-detail > .provenance-list { padding: 18px; }
+ .methodology-page .method-detail .method-version { max-width: 32%; overflow-wrap: anywhere; text-align: right; }
+ .methodology-page .methodology-interpretation, .methodology-page .history-panel { padding: 20px; }
+}
+@media print {
+ .methodology-page .methodology-navigation, .methodology-page .methodology-back-link { display: none; }
+ .methodology-page .methodology-section + .methodology-section { margin-top: 28px; }
+}
